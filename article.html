@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Shizhou 内容详情页，以深空控制台视觉呈现完整文章内容。">
+  <meta name="keywords" content="文章详情页, 内容详情, 个人博客, 产品记录, 前端实验">
+  <title>Article // Shizhou Neural Archive</title>
+  <link rel="stylesheet" href="static/css/scifi-blog.css">
+  <link rel="stylesheet" href="static/css/content-pages.css">
+  <script defer src="static/js/content-data.js"></script>
+  <script defer src="static/js/content-pages.js"></script>
+</head>
+
+<body>
+  <div class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Shizhou Neural Archive">
+        <span class="brand-mark">SHIZHOU</span>
+        <span class="brand-sub">NEURAL ARCHIVE</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="archive.html">归档</a>
+        <a href="article.html?slug=control-room-architecture">详情</a>
+      </nav>
+
+      <a class="nav-cta" href="archive.html">Back To Archive</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="panel page-hero reveal">
+        <div class="page-hero-copy">
+          <p class="eyebrow">DETAIL VIEW / LONGFORM / SIGNAL READING</p>
+          <h1>把单篇文章从首页卡片里释放出来，进入完整阅读层。</h1>
+          <p class="archive-intro">
+            详情页延续首页的视觉系统，但把注意力从“分发模块”转向“完整叙事”。左侧是正文，右侧是提纲、重点和跳转入口，阅读链路更完整。
+          </p>
+
+          <div class="subnav">
+            <a class="subnav-link" href="archive.html">查看全部归档</a>
+            <a class="subnav-link" href="index.html#feed">返回首页内容流</a>
+          </div>
+        </div>
+
+        <aside class="page-hero-aside">
+          <div>
+            <span class="panel-tag">Detail Role</span>
+            <p class="hero-note">详情页不需要再解释你是谁，它只负责让一篇内容被完整阅读，并顺手导向下一篇。</p>
+          </div>
+          <ul class="hero-list">
+            <li>正文节奏优先，不让组件喧宾夺主</li>
+            <li>右侧保留提纲与关键点，帮助快速浏览</li>
+            <li>底部再接相关文章，形成阅读回路</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="article-layout" id="article-root"></section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RELATED SIGNALS</p>
+            <h2>继续沿着这条轨道阅读</h2>
+          </div>
+          <p class="section-copy">相关文章会让详情页不止是一张终点页，而是整个内容网络里的中继站。</p>
+        </div>
+        <div class="related-grid" id="related-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <span class="footer-mark">SHIZHOU // DETAIL LAYER</span>
+        <p>完整阅读、提纲定位与相关文章跳转已经接入同一套界面协议。</p>
+      </div>
+      <div class="footer-meta">
+        <span id="sync-time">SYNCING...</span>
+        <span id="year-mark">2026</span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

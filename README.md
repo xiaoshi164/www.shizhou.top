@@ -2,7 +2,7 @@
 
 `www.shizhou.top` 当前是一个以个人表达为核心的静态站点仓库。
 
-首页 [`index.html`](./index.html) 已重构为科幻风格的个人博客首页，围绕「内容输出 + 项目展示 + 后续 API 接入」设计；仓库中同时保留了一组旧的模板型内页，便于后续继续替换或二次改造。
+首页 [`index.html`](./index.html) 已重构为科幻风格的个人博客首页，围绕「内容输出 + 项目展示 + 后续 API 接入」设计。当前仓库还包含与首页同一视觉语言的归档页 [`archive.html`](./archive.html) 和内容详情页 [`article.html`](./article.html)，三者共用同一套静态数据源与样式协议。
 
 ## 项目定位
 
@@ -14,41 +14,36 @@
 ## 当前状态
 
 - 首页使用独立样式 [`static/css/scifi-blog.css`](./static/css/scifi-blog.css)
+- 内容页扩展样式位于 [`static/css/content-pages.css`](./static/css/content-pages.css)
 - 首页交互与本地数据渲染位于 [`static/js/scifi-blog.js`](./static/js/scifi-blog.js)
+- 共享内容数据位于 [`static/js/content-data.js`](./static/js/content-data.js)
+- 归档页与详情页逻辑位于 [`static/js/content-pages.js`](./static/js/content-pages.js)
 - 首页内容模块已经按数据结构组织，便于未来替换为真实接口
-- 其余页面仍保留原始模板结构，可作为后续重构基础
+- 已补归档页与详情页，首页到内容阅读链路已经打通
 
 ## 页面说明
 
 - `index.html`：当前主入口，科幻风格个人博客首页
-- `about-us.html`：关于页模板
-- `services.html` / `services-details.html`：服务列表与详情模板
-- `portfolio.html` / `portfolio-detaills.html`：作品集页面模板
-- `blog.html` / `blog-detail.html`：博客列表与详情模板
-- `contact-us.html`：联系页模板
-- `说明.htm`：模板源文件附带的历史说明页，非站点正式内容
+- `archive.html`：内容归档页，负责主题筛选与内容索引
+- `article.html`：内容详情页，负责完整正文阅读与相关文章跳转
 
 ## 目录结构
 
 ```text
 .
+├─ archive.html
+├─ article.html
 ├─ index.html
-├─ about-us.html
-├─ services.html
-├─ services-details.html
-├─ portfolio.html
-├─ portfolio-detaills.html
-├─ blog.html
-├─ blog-detail.html
-├─ contact-us.html
 ├─ README.md
-├─ 说明.htm
 └─ static
    ├─ css
+   │  ├─ content-pages.css
+   │  └─ scifi-blog.css
    ├─ js
-   ├─ font
-   ├─ image
-   └─ picture
+   │  ├─ content-data.js
+   │  ├─ content-pages.js
+   │  └─ scifi-blog.js
+   └─ font
 ```
 
 ## 本地预览
@@ -72,6 +67,7 @@ http://localhost:8080
 - 中文内容表达 + 英文界面标记
 - 深空控制台风格视觉系统
 - 首页由 Hero、Signal、Feed、Stack、Timeline、API Dock 等模块组成
+- 归档页负责筛选与索引，详情页负责正文阅读与相关文章串联
 - 内容、项目、短讯和时间线都通过本地 JavaScript 对象渲染
 - 后续可平滑切换到 `/api/posts`、`/api/projects`、`/api/timeline` 等接口
 
@@ -87,7 +83,6 @@ http://localhost:8080
 
 ## 后续可继续完善
 
-- 将旧模板内页统一改造成与首页一致的视觉语言
 - 为博客、项目、时间线接入真实 API 或 CMS
-- 增加文章详情、归档页、标签页、订阅模块
-- 清理旧模板遗留素材与历史说明文件
+- 在归档页上继续扩展标签、搜索、分页与年份维度
+- 为详情页补目录高亮、上一篇/下一篇和项目详情模板

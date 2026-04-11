@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Shizhou 内容归档页，按统一视觉语言整理产品、设计系统与工作流日志。">
+  <meta name="keywords" content="归档页, 博客归档, 内容索引, 产品日志, AI 工作流">
+  <title>Archive // Shizhou Neural Archive</title>
+  <link rel="stylesheet" href="static/css/scifi-blog.css">
+  <link rel="stylesheet" href="static/css/content-pages.css">
+  <script defer src="static/js/content-data.js"></script>
+  <script defer src="static/js/content-pages.js"></script>
+</head>
+
+<body>
+  <div class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Shizhou Neural Archive">
+        <span class="brand-mark">SHIZHOU</span>
+        <span class="brand-sub">NEURAL ARCHIVE</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="archive.html">归档</a>
+        <a href="article.html?slug=control-room-architecture">详情</a>
+      </nav>
+
+      <a class="nav-cta" href="article.html?slug=control-room-architecture">Latest Detail</a>
+    </header>
+
+    <main class="page-shell">
+      <section class="panel page-hero reveal">
+        <div class="page-hero-copy">
+          <p class="eyebrow">CONTENT ARCHIVE / INDEX / READING ROUTE</p>
+          <h1>把最近的文章轨迹收束成一张可检索的航图。</h1>
+          <p class="archive-intro">
+            这里不只是把标题堆成列表，而是把当前站点的长文内容按同一套控制台语言重新组织。你可以按主题筛选，也可以直接进入详情页阅读完整记录。
+          </p>
+
+          <div class="subnav">
+            <a class="subnav-link" href="index.html#feed">返回首页内容流</a>
+            <a class="subnav-link" href="article.html?slug=control-room-architecture">打开最新详情</a>
+          </div>
+        </div>
+
+        <aside class="page-hero-aside">
+          <div>
+            <span class="panel-tag">Archive Logic</span>
+            <p class="hero-note">归档页负责“看全局”。首页负责分发，详情页负责沉浸阅读，归档则负责让内容真正形成结构。</p>
+          </div>
+          <ol class="hero-list">
+            <li>同一视觉语言延伸到内容索引层</li>
+            <li>按主题筛选，而不是只按时间堆叠</li>
+            <li>为未来搜索、标签和分页预留位置</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FILTER GRID</p>
+            <h2>按内容轨道筛选</h2>
+          </div>
+          <p class="section-copy">
+            当前归档先按主题分类，后续接真实 API 时可以平滑切换成标签、年份、系列或全文检索。
+          </p>
+        </div>
+
+        <div class="archive-controls" id="archive-filters"></div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ARCHIVE LOGS</p>
+            <h2>当前已入轨内容</h2>
+          </div>
+          <p class="section-copy">
+            每张卡片都保留了详情页入口，首页不再承担全部阅读任务。
+          </p>
+        </div>
+
+        <div class="archive-grid" id="archive-grid"></div>
+      </section>
+
+      <section class="archive-rail reveal">
+        <article class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ARCHIVE STATUS</p>
+              <h2>归档面板状态</h2>
+            </div>
+            <p class="section-copy">内容总量还不大，但结构已经具备扩展条件。</p>
+          </div>
+          <div class="archive-stats" id="archive-stats"></div>
+        </article>
+
+        <article class="topic-cluster">
+          <span class="panel-tag">TOPIC CLOUD</span>
+          <h3>当前主要主题</h3>
+          <p class="hero-note">这些主题会成为后续标签页、系列页和自动聚合的起点。</p>
+          <div class="topic-cloud" id="topic-cloud"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <span class="footer-mark">SHIZHOU // ARCHIVE INDEX</span>
+        <p>首页负责引导，归档负责检索，详情页负责沉浸阅读。</p>
+      </div>
+      <div class="footer-meta">
+        <span id="sync-time">SYNCING...</span>
+        <span id="year-mark">2026</span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

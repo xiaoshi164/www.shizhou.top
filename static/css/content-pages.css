@@ -1,0 +1,375 @@
+.page-shell {
+    display: grid;
+    gap: 28px;
+}
+
+.subnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.subnav-link,
+.filter-chip,
+.mini-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.subnav-link:hover,
+.filter-chip:hover,
+.mini-link:hover,
+.subnav-link:focus-visible,
+.filter-chip:focus-visible,
+.mini-link:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--line-strong);
+    color: var(--text);
+}
+
+.filter-chip.is-active {
+    color: var(--bg);
+    border-color: transparent;
+    background: linear-gradient(135deg, var(--cyan), var(--green));
+}
+
+.page-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    gap: 22px;
+    padding: 34px;
+}
+
+.page-hero-copy {
+    display: grid;
+    gap: 18px;
+}
+
+.page-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.status-pill,
+.topic-pill,
+.meta-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.status-pill {
+    color: var(--green);
+    background: rgba(140, 255, 138, 0.12);
+}
+
+.topic-pill,
+.meta-pill {
+    color: var(--cyan);
+    background: rgba(92, 238, 255, 0.08);
+}
+
+.page-hero-copy h1 {
+    max-width: 12ch;
+}
+
+.page-hero-copy p,
+.hero-note,
+.archive-intro,
+.archive-card p,
+.article-body p,
+.article-callout p,
+.article-aside p,
+.mini-card p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.page-hero-aside,
+.archive-card,
+.article-callout,
+.article-aside,
+.mini-card,
+.topic-cluster {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--panel);
+    backdrop-filter: blur(12px);
+}
+
+.page-hero-aside,
+.archive-card,
+.article-callout,
+.article-aside,
+.mini-card {
+    padding: 22px;
+}
+
+.page-hero-aside {
+    display: grid;
+    gap: 18px;
+}
+
+.hero-note {
+    margin: 0;
+}
+
+.hero-list,
+.archive-stats,
+.article-outline,
+.article-tags,
+.mini-list {
+    display: grid;
+    gap: 12px;
+}
+
+.hero-list,
+.article-outline,
+.mini-list {
+    padding-left: 18px;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.archive-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.archive-card {
+    display: grid;
+    gap: 16px;
+    min-height: 100%;
+}
+
+.archive-card-head,
+.archive-card-footer,
+.detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.archive-card-footer {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(92, 238, 255, 0.1);
+}
+
+.archive-card-title {
+    font-family: "Red Rose", serif;
+    font-size: 1.6rem;
+    line-height: 1.1;
+}
+
+.archive-card-summary {
+    margin: 0;
+}
+
+.archive-rail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 18px;
+}
+
+.archive-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card {
+    padding: 18px;
+    border: 1px solid rgba(92, 238, 255, 0.12);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.4rem;
+}
+
+.topic-cluster {
+    padding: 20px;
+}
+
+.topic-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.55fr);
+    gap: 18px;
+}
+
+.article-main {
+    display: grid;
+    gap: 18px;
+}
+
+.article-panel {
+    padding: 28px;
+}
+
+.detail-meta {
+    color: rgba(231, 251, 255, 0.65);
+    font-size: 0.84rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.article-deck {
+    display: grid;
+    gap: 12px;
+    margin: 28px 0 0;
+}
+
+.article-deck-item {
+    padding: 16px 18px;
+    border-left: 2px solid var(--cyan);
+    border-radius: 0 18px 18px 0;
+    background: rgba(92, 238, 255, 0.05);
+    color: rgba(231, 251, 255, 0.9);
+}
+
+.article-body {
+    display: grid;
+    gap: 24px;
+}
+
+.article-section {
+    display: grid;
+    gap: 14px;
+}
+
+.article-section h2 {
+    max-width: none;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.article-callout {
+    background:
+        linear-gradient(135deg, rgba(92, 238, 255, 0.12), transparent 68%),
+        rgba(8, 23, 41, 0.84);
+}
+
+.article-callout p {
+    margin: 12px 0 0;
+    font-size: 1.08rem;
+}
+
+.article-aside {
+    display: grid;
+    gap: 18px;
+    align-self: start;
+    position: sticky;
+    top: 104px;
+}
+
+.aside-group {
+    display: grid;
+    gap: 12px;
+}
+
+.article-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tag-chip {
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px 12px;
+    border: 1px solid rgba(92, 238, 255, 0.12);
+    border-radius: 999px;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.02);
+    font-size: 0.85rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.mini-card {
+    display: grid;
+    gap: 14px;
+}
+
+.mini-card h3 {
+    font-size: 1.25rem;
+}
+
+.empty-state {
+    padding: 28px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .page-hero,
+    .archive-rail,
+    .article-layout,
+    .archive-stats,
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-aside {
+        position: static;
+    }
+}
+
+@media (max-width: 820px) {
+    .page-hero,
+    .article-panel {
+        padding: 24px;
+    }
+
+    .archive-grid,
+    .article-tags {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .archive-card-title {
+        font-size: 1.35rem;
+    }
+
+    .subnav-link,
+    .filter-chip,
+    .mini-link {
+        width: 100%;
+    }
+}

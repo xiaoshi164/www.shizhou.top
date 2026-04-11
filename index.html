@@ -9,6 +9,7 @@
   <meta name="keywords" content="个人博客, 科幻博客, 前端, AI, 产品, 静态网站">
   <title>Shizhou // Neural Archive</title>
   <link rel="stylesheet" href="static/css/scifi-blog.css">
+  <script defer src="static/js/content-data.js"></script>
   <script defer src="static/js/scifi-blog.js"></script>
 </head>
 
@@ -26,12 +27,13 @@
       <nav class="nav">
         <a href="#signal">信号</a>
         <a href="#feed">日志</a>
+        <a href="archive.html">归档</a>
         <a href="#stack">栈</a>
         <a href="#timeline">航迹</a>
         <a href="#api-ready">API Dock</a>
       </nav>
 
-      <a class="nav-cta" href="#api-ready">Static v0.1</a>
+      <a class="nav-cta" href="archive.html">Open Archive</a>
     </header>
 
     <main>
@@ -45,8 +47,8 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#feed">进入最新日志</a>
-            <a class="button button-secondary" href="#stack">查看工作协议</a>
+            <a class="button button-primary" href="archive.html">进入内容归档</a>
+            <a class="button button-secondary" href="article.html?slug=control-room-architecture">打开详情页样机</a>
           </div>
 
           <div class="hero-stats">
@@ -203,8 +205,8 @@
             </article>
             <article class="stack-panel">
               <span class="panel-tag">EXTENSION</span>
-              <h3>可继续加文章详情、分类页、订阅区</h3>
-              <p>现在是静态首页，后续扩站不会推翻当前结构。</p>
+              <h3>已补归档页与详情页，可继续接搜索订阅</h3>
+              <p>现在不再是单页展示，首页已经接出完整的内容浏览链路。</p>
             </article>
           </div>
         </div>
@@ -249,8 +251,8 @@
             <h3>最省力的升级路径</h3>
             <ol>
               <li>先把本地数据对象替换成 `fetch('/api/...')`。</li>
-              <li>再把文章卡片和时间线切到真实内容源。</li>
-              <li>最后补文章详情页、搜索、标签和订阅。</li>
+              <li>再把归档页和详情页切到真实文章源。</li>
+              <li>最后补搜索、标签、订阅和项目详情。</li>
             </ol>
             <p class="api-footnote">
               如果你后面要接 Notion、Headless CMS 或自建服务，这一版前端结构已经足够稳定，不需要重做视觉层。
