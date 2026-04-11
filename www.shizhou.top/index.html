@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Shizhou 的科幻个人博客首页，当前为静态版本，后续将对接文章、项目与实时状态 API。">
+  <meta name="keywords" content="个人博客, 科幻博客, 前端, AI, 产品, 静态网站">
+  <title>Shizhou // Neural Archive</title>
+  <link rel="stylesheet" href="static/css/scifi-blog.css">
+  <script defer src="static/js/scifi-blog.js"></script>
+</head>
+
+<body>
+  <div class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Shizhou Neural Archive">
+        <span class="brand-mark">SHIZHOU</span>
+        <span class="brand-sub">NEURAL ARCHIVE</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#signal">信号</a>
+        <a href="#feed">日志</a>
+        <a href="#stack">栈</a>
+        <a href="#timeline">航迹</a>
+        <a href="#api-ready">API Dock</a>
+      </nav>
+
+      <a class="nav-cta" href="#api-ready">Static v0.1</a>
+    </header>
+
+    <main>
+      <section class="hero panel reveal" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">PERSONAL BLOG / STATIC DEPLOYMENT / API READY</p>
+          <h1>把灵感、代码与实验记录成一座深空档案馆。</h1>
+          <p class="hero-text">
+            这是一个为后续内容系统预热的科幻博客首页。当前所有文章、项目和时间线均由本地数据渲染，下一阶段可直接替换成
+            API 返回结果，接入文章流、项目状态和个人仪表盘。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#feed">进入最新日志</a>
+            <a class="button button-secondary" href="#stack">查看工作协议</a>
+          </div>
+
+          <div class="hero-stats">
+            <article class="metric-card">
+              <span class="metric-label">CURRENT MODE</span>
+              <strong>Static Front</strong>
+              <p>界面优先，内容由本地对象驱动，结构已为 API 适配。</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">FOCUS</span>
+              <strong>Writing + Build + AI</strong>
+              <p>围绕产品观察、前端实验与自动化工作流构建内容阵列。</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">NEXT DOCK</span>
+              <strong>Content API</strong>
+              <p>后续计划对接文章列表、项目详情、状态流和订阅模块。</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-console">
+          <div class="console-head">
+            <span>Bridge Console</span>
+            <span class="console-status">ONLINE</span>
+          </div>
+          <div class="console-grid">
+            <div class="console-card">
+              <span class="console-label">Signal Strength</span>
+              <strong>98.4%</strong>
+              <p>创作流、代码流、产品流已同步。</p>
+            </div>
+            <div class="console-card">
+              <span class="console-label">Deploy Mode</span>
+              <strong>Pure Static</strong>
+              <p>无后端依赖，可直接部署到任意静态托管环境。</p>
+            </div>
+            <div class="console-card console-card-wide">
+              <span class="console-label">Mission Brief</span>
+              <ul class="console-list">
+                <li>用更个人化的信息架构替代企业模板感</li>
+                <li>把文章、项目、状态模块统一到一个未来感界面中</li>
+                <li>保留清晰的数据入口，后续接入 API 不需要重写页面</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="ticker">
+        <div class="ticker-track">
+          <span>NEURAL ARCHIVE</span>
+          <span>STATIC NOW</span>
+          <span>API NEXT</span>
+          <span>FRONTEND LAB</span>
+          <span>AI WORKFLOW</span>
+          <span>PRODUCT SIGNAL</span>
+          <span>NEURAL ARCHIVE</span>
+          <span>STATIC NOW</span>
+          <span>API NEXT</span>
+          <span>FRONTEND LAB</span>
+          <span>AI WORKFLOW</span>
+          <span>PRODUCT SIGNAL</span>
+        </div>
+      </section>
+
+      <section class="section reveal" id="signal">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SIGNAL BOARD</p>
+            <h2>这个博客现在传输什么信号</h2>
+          </div>
+          <p class="section-copy">
+            首页不再像模板站那样堆业务模块，而是变成一个属于个人创作者的舰桥。核心是表达你在做什么、观察什么、下一步连什么系统。
+          </p>
+        </div>
+
+        <div class="signal-grid">
+          <article class="info-card">
+            <span class="card-index">01</span>
+            <h3>内容信号</h3>
+            <p>输出产品思考、技术复盘、AI 工作流与构建记录，形成可持续更新的知识航线。</p>
+          </article>
+          <article class="info-card">
+            <span class="card-index">02</span>
+            <h3>实验信号</h3>
+            <p>保留 demo、项目片段、UI 研究与自动化脚本，页面既是博客，也是公开实验舱。</p>
+          </article>
+          <article class="info-card">
+            <span class="card-index">03</span>
+            <h3>接口信号</h3>
+            <p>文章流、项目流、状态流都按数据块组织，后续可直接接 CMS、Notion、Supabase 或自建 API。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="feed">
+        <div class="section-heading section-heading-inline">
+          <div>
+            <p class="eyebrow">LIVE FEED</p>
+            <h2>最新传输</h2>
+          </div>
+          <div class="feed-tabs" aria-label="内容类型">
+            <button class="feed-tab is-active" type="button" data-feed="posts">日志</button>
+            <button class="feed-tab" type="button" data-feed="projects">项目</button>
+            <button class="feed-tab" type="button" data-feed="notes">短讯</button>
+          </div>
+        </div>
+
+        <div class="feed-grid" id="feed-grid"></div>
+      </section>
+
+      <section class="section split-section reveal" id="stack">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">WORK PROTOCOL</p>
+            <h2>内容系统与个人品牌的底层协议</h2>
+          </div>
+          <p class="section-copy">
+            科幻感不只是视觉层。这个版本把首页拆成可维护的数据模块，后续无论是接内容 API、做归档页还是做项目详情页，都能直接复用。
+          </p>
+        </div>
+
+        <div class="stack-layout">
+          <article class="stack-panel stack-panel-large">
+            <span class="panel-tag">SYSTEM DESIGN</span>
+            <h3>先做清晰的信息架构，再叠加世界观和氛围。</h3>
+            <p>
+              首页以英雄区、信号板、内容流、协议栈、时间线和 API Dock 组成。视觉是深空控制台，逻辑是数据面板。这样既不会空洞，也方便后面拆成真实内容系统。
+            </p>
+            <div class="stack-points">
+              <span>Static Rendering</span>
+              <span>Structured Content</span>
+              <span>API Migration Ready</span>
+              <span>Mobile First Responsive</span>
+            </div>
+          </article>
+
+          <div class="stack-grid">
+            <article class="stack-panel">
+              <span class="panel-tag">VOICE</span>
+              <h3>中文叙事 + 英文界面标记</h3>
+              <p>保持科幻控制台气质，同时不牺牲中文阅读效率。</p>
+            </article>
+            <article class="stack-panel">
+              <span class="panel-tag">VISUAL</span>
+              <h3>深空背景、网格扫描、霓虹描边</h3>
+              <p>依靠纯 CSS 建立未来感，不依赖沉重图片素材。</p>
+            </article>
+            <article class="stack-panel">
+              <span class="panel-tag">CONTENT MODEL</span>
+              <h3>本地对象即未来接口契约</h3>
+              <p>前端渲染使用统一字段，后续可直接替换为接口响应。</p>
+            </article>
+            <article class="stack-panel">
+              <span class="panel-tag">EXTENSION</span>
+              <h3>可继续加文章详情、分类页、订阅区</h3>
+              <p>现在是静态首页，后续扩站不会推翻当前结构。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="timeline">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FLIGHT PATH</p>
+            <h2>构建航迹</h2>
+          </div>
+          <p class="section-copy">
+            时间线展示当前博客演进节奏，也可以在接入 API 后切成真实更新日志或公开 roadmap。
+          </p>
+        </div>
+
+        <div class="timeline-list" id="timeline-list"></div>
+      </section>
+
+      <section class="section api-section reveal" id="api-ready">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">API DOCK</p>
+            <h2>后续接入接口时，优先连接这些模块</h2>
+          </div>
+          <p class="section-copy">
+            当前页面已经按数据块拆开。等你准备接后端或第三方服务时，优先让文章、项目、状态面板变成真实数据源。
+          </p>
+        </div>
+
+        <div class="api-layout">
+          <article class="api-blueprint">
+            <div class="console-head">
+              <span>Future Endpoints</span>
+              <span class="console-status">QUEUED</span>
+            </div>
+            <div class="api-list" id="api-list"></div>
+          </article>
+
+          <article class="api-notes">
+            <span class="panel-tag">NEXT PHASE</span>
+            <h3>最省力的升级路径</h3>
+            <ol>
+              <li>先把本地数据对象替换成 `fetch('/api/...')`。</li>
+              <li>再把文章卡片和时间线切到真实内容源。</li>
+              <li>最后补文章详情页、搜索、标签和订阅。</li>
+            </ol>
+            <p class="api-footnote">
+              如果你后面要接 Notion、Headless CMS 或自建服务，这一版前端结构已经足够稳定，不需要重做视觉层。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <span class="footer-mark">SHIZHOU // PERSONAL SIGNAL NODE</span>
+        <p>为创作、构建与长期项目留下可检索的轨迹。</p>
+      </div>
+      <div class="footer-meta">
+        <span id="sync-time">SYNCING...</span>
+        <span id="year-mark">2026</span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
