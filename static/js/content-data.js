@@ -1,3 +1,4 @@
+globalThis.window = globalThis.window || {};
 window.siteData = {
   posts: [
     {
@@ -66,6 +67,20 @@ window.siteData = {
       orbit: "Orbit W1",
       linkLabel: "Read Detail",
       summary: "WalkByFaith 位于 /mnt/d/Project WeChat/WalkByFaith，已经具备 app.js、app.json、自定义 tabBar 和 pages 结构。它很适合放在首页前排，因为这是明显面向移动端体验的真实项目。",
+      cover: "static/images/projects/walkbyfaith-cover.png",
+      coverAlt: "WalkByFaith 小程序组件图标封面",
+      gallery: [
+        {
+          src: "static/images/projects/walkbyfaith-cover.png",
+          alt: "WalkByFaith 组件入口图标",
+          caption: "来自项目 image 目录，至少说明这个小程序已经整理了组件入口视觉资源。"
+        },
+        {
+          src: "static/images/projects/walkbyfaith-detail-api.png",
+          alt: "WalkByFaith API 图标",
+          caption: "项目内 API 图标资源，可作为详情页的辅助视觉，不再只剩文字。"
+        }
+      ],
       deck: [
         "有页面结构，能说明项目不是空壳。",
         "自定义 tabBar 说明做过界面层设计。",
@@ -119,6 +134,20 @@ window.siteData = {
       orbit: "Orbit W2",
       linkLabel: "Read Detail",
       summary: "WalkByFaith 不该只停留在“有个微信小程序目录”这种级别。现在能确认的证据已经足够把它写成一条更完整的案例：项目配置了主页与我的页、自定义 tabBar、weui-miniprogram 组件，并且 project.config.json 也说明它就是一个实际的小程序工程。",
+      cover: "static/images/projects/walkbyfaith-cover.png",
+      coverAlt: "WalkByFaith 深化详情封面",
+      gallery: [
+        {
+          src: "static/images/projects/walkbyfaith-cover.png",
+          alt: "WalkByFaith 首页组件图",
+          caption: "封面直接取自项目 image 目录，至少不是我凭空画出来的假图。"
+        },
+        {
+          src: "static/images/projects/walkbyfaith-detail-api.png",
+          alt: "WalkByFaith API 图标资源",
+          caption: "API 图标能让详情页先有真实视觉锚点，后面再补正式页面截图。"
+        }
+      ],
       deck: [
         "不是只有 app.json，而是明确看到了页面入口和组件依赖。",
         "custom tabBar 说明它不是只用默认壳子糊出来的。",
@@ -172,6 +201,15 @@ window.siteData = {
       orbit: "Orbit G1",
       linkLabel: "Read Detail",
       summary: "TaskAPI 位于 /mnt/d/Project Go/taskapi。README 已明确写出 Gin 路由、中间件、并发安全内存存储、pprof、优雅关停与单元测试，这种项目就该放进站里撑住“你真的做过工程”的部分。",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / GO BACKEND</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>go run ./cmd/server</text><text x='92' y='290' fill='%238cff8a' font-size='24' font-family='monospace'>GET /ping</text><text x='92' y='338' fill='%238cff8a' font-size='24' font-family='monospace'>GET /api/v1/tasks</text><text x='92' y='386' fill='%23ff9c54' font-size='24' font-family='monospace'>GET /debug/pprof</text><text x='92' y='490' fill='%239ab5c5' font-size='22' font-family='monospace'>gin-gonic/gin + spf13/viper + graceful shutdown</text></svg>",
+      coverAlt: "TaskAPI 终端风工程封面",
+      gallery: [
+        {
+          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / GO BACKEND</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>go run ./cmd/server</text><text x='92' y='290' fill='%238cff8a' font-size='24' font-family='monospace'>GET /ping</text><text x='92' y='338' fill='%238cff8a' font-size='24' font-family='monospace'>GET /api/v1/tasks</text><text x='92' y='386' fill='%23ff9c54' font-size='24' font-family='monospace'>GET /debug/pprof</text><text x='92' y='490' fill='%239ab5c5' font-size='22' font-family='monospace'>gin-gonic/gin + spf13/viper + graceful shutdown</text></svg>",
+          alt: "TaskAPI 工程能力封面",
+          caption: "这张不是项目截图，而是根据 README 已确认的信息做的代码风封面，用来解决后端项目没图的问题。"
+        }
+      ],
       deck: [
         "README 直接写清楚能力边界。",
         "有 internal 分层和测试文件，不是只搭了个 hello world。",
@@ -225,6 +263,15 @@ window.siteData = {
       orbit: "Orbit G2",
       linkLabel: "Read Detail",
       summary: "TaskAPI 目前已经具备很完整的对外描述基础：go.mod 明确是 Go 1.21，依赖 Gin 与 Viper；README 直接写出 go run ./cmd/server、/ping、/api/v1/tasks 和 /debug/pprof。这种项目完全可以从“接口项目”继续深化为“后端工程案例”。",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / RUNTIME DETAIL</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>Go 1.21</text><text x='92' y='286' fill='%238cff8a' font-size='24' font-family='monospace'>gin-gonic/gin</text><text x='92' y='334' fill='%238cff8a' font-size='24' font-family='monospace'>spf13/viper</text><text x='92' y='414' fill='%23ff9c54' font-size='24' font-family='monospace'>/api/v1/tasks  /debug/pprof</text></svg>",
+      coverAlt: "TaskAPI 运行细节封面",
+      gallery: [
+        {
+          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / RUNTIME DETAIL</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>Go 1.21</text><text x='92' y='286' fill='%238cff8a' font-size='24' font-family='monospace'>gin-gonic/gin</text><text x='92' y='334' fill='%238cff8a' font-size='24' font-family='monospace'>spf13/viper</text><text x='92' y='414' fill='%23ff9c54' font-size='24' font-family='monospace'>/api/v1/tasks  /debug/pprof</text></svg>",
+          alt: "TaskAPI README 信息封面",
+          caption: "没现成截图，就先把 README 里已经核实的运行信息视觉化。至少这比一块空白文字墙强。"
+        }
+      ],
       deck: [
         "运行命令、接口前缀、调试入口都清楚。",
         "Go 1.21 + Gin + Viper 的组合已经能说明工程方向。",

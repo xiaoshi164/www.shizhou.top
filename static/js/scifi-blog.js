@@ -8,7 +8,9 @@ const contentMap = {
     excerpt: post.excerpt,
     meta: post.meta,
     linkLabel: post.linkLabel,
-    href: `article.html?slug=${encodeURIComponent(post.slug)}`
+    href: `article.html?slug=${encodeURIComponent(post.slug)}`,
+    image: post.cover,
+    imageAlt: post.coverAlt
   })),
   projects: siteData.projects || [],
   notes: siteData.notes || []
@@ -36,20 +38,28 @@ function escapeHtml(value) {
 function renderFeed(type) {
   const items = contentMap[type] || [];
 
-  feedGrid.innerHTML = items.map((item) => `
+  feedGrid.innerHTML = items.map((item) => {
+    const image = item.image || item.cover;
+    const imageAlt = item.imageAlt || item.coverAlt || item.title;
+
+    return `
     <article class="feed-card">
-      <div class="feed-card-top">
-        <span class="feed-badge">${escapeHtml(item.badge)}</span>
-        <span class="feed-status">${escapeHtml(item.status)}</span>
-      </div>
-      <h3>${escapeHtml(item.title)}</h3>
-      <p>${escapeHtml(item.excerpt)}</p>
-      <div class="feed-footer">
-        <span class="feed-meta">${escapeHtml(item.meta)}</span>
-        <a class="feed-link" href="${escapeHtml(item.href || "archive.html")}">${escapeHtml(item.linkLabel)}</a>
+      ${image ? `<div class="feed-card-media"><img src="${escapeHtml(image)}" alt="${escapeHtml(imageAlt)}" loading="lazy"></div>` : ""}
+      <div class="feed-card-body">
+        <div class="feed-card-top">
+          <span class="feed-badge">${escapeHtml(item.badge)}</span>
+          <span class="feed-status">${escapeHtml(item.status)}</span>
+        </div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.excerpt)}</p>
+        <div class="feed-footer">
+          <span class="feed-meta">${escapeHtml(item.meta)}</span>
+          <a class="feed-link" href="${escapeHtml(item.href || "archive.html")}">${escapeHtml(item.linkLabel)}</a>
+        </div>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function renderTimeline() {

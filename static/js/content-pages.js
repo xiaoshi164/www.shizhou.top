@@ -61,6 +61,38 @@ function getRelatedPosts(post) {
   return posts.filter((item) => related.has(item.slug));
 }
 
+function renderResponsiveImage(src, alt, className = "") {
+  if (!src) {
+    return "";
+  }
+
+  return `<div class="${escapeHtml(className)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt || "Project visual")}" loading="lazy"></div>`;
+}
+
+function renderGallerySection(article) {
+  if (!Array.isArray(article.gallery) || !article.gallery.length) {
+    return "";
+  }
+
+  return `
+    <section class="article-gallery-section">
+      <div class="article-gallery-head">
+        <span class="panel-tag">Gallery</span>
+        <h2>相关视觉资料</h2>
+        <p>能直接拿项目里的图就拿项目图；后端没截图的地方，也会明确标注成生成视觉，不装。</p>
+      </div>
+      <div class="article-gallery">
+        ${article.gallery.map((item) => `
+          <figure class="gallery-card">
+            <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt || article.title)}" loading="lazy">
+            ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
+          </figure>
+        `).join("")}
+      </div>
+    </section>
+  `;
+}
+
 function renderArchivePage() {
   const filterRoot = document.getElementById("archive-filters");
   const gridRoot = document.getElementById("archive-grid");
@@ -138,23 +170,30 @@ function renderArchivePage() {
       return;
     }
 
-    gridRoot.innerHTML = filteredPosts.map((post) => `
+    gridRoot.innerHTML = filteredPosts.map((post) => {
+      const image = renderResponsiveImage(post.cover, post.coverAlt || post.title, "archive-card-media");
+
+      return `
       <article class="archive-card">
-        <div class="archive-card-head">
-          <span class="feed-badge">${escapeHtml(post.badge)}</span>
-          <span class="feed-status">${escapeHtml(post.status)}</span>
-        </div>
-        <div>
-          <p class="eyebrow">${escapeHtml(post.category)} / ${escapeHtml(post.orbit)}</p>
-          <h3 class="archive-card-title">${escapeHtml(post.title)}</h3>
-        </div>
-        <p class="archive-card-summary">${escapeHtml(post.summary)}</p>
-        <div class="archive-card-footer">
-          <span class="feed-meta">${escapeHtml(formatDisplayDate(post.date))} / ${escapeHtml(post.readTime)}</span>
-          <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">Open Detail</a>
+        ${image}
+        <div class="archive-card-body">
+          <div class="archive-card-head">
+            <span class="feed-badge">${escapeHtml(post.badge)}</span>
+            <span class="feed-status">${escapeHtml(post.status)}</span>
+          </div>
+          <div>
+            <p class="eyebrow">${escapeHtml(post.category)} / ${escapeHtml(post.orbit)}</p>
+            <h3 class="archive-card-title">${escapeHtml(post.title)}</h3>
+          </div>
+          <p class="archive-card-summary">${escapeHtml(post.summary)}</p>
+          <div class="archive-card-footer">
+            <span class="feed-meta">${escapeHtml(formatDisplayDate(post.date))} / ${escapeHtml(post.readTime)}</span>
+            <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">Open Detail</a>
+          </div>
         </div>
       </article>
-    `).join("");
+    `;
+    }).join("");
   }
 
   renderStats();
@@ -200,6 +239,7 @@ function renderArticlePage() {
         <p class="eyebrow">${escapeHtml(article.category)} / ${escapeHtml(article.orbit)}</p>
         <h1>${escapeHtml(article.title)}</h1>
         <p class="archive-intro">${escapeHtml(article.summary)}</p>
+        ${renderResponsiveImage(article.cover, article.coverAlt || article.title, "article-hero-media")}
         <div class="article-deck">
           ${article.deck.map((item) => `<div class="article-deck-item">${escapeHtml(item)}</div>`).join("")}
         </div>
@@ -215,6 +255,8 @@ function renderArticlePage() {
           `).join("")}
         </div>
       </article>
+
+      ${renderGallerySection(article)}
 
       <article class="article-callout reveal">
         <span class="panel-tag">Core Signal</span>
@@ -246,6 +288,7 @@ function renderArticlePage() {
   const relatedPosts = getRelatedPosts(article);
   relatedRoot.innerHTML = relatedPosts.map((post) => `
     <article class="mini-card reveal">
+      ${renderResponsiveImage(post.cover, post.coverAlt || post.title, "mini-card-media")}
       <span class="panel-tag">${escapeHtml(post.category)}</span>
       <h3>${escapeHtml(post.title)}</h3>
       <p>${escapeHtml(post.excerpt)}</p>
