@@ -49,7 +49,8 @@ window.siteData = {
       ],
       relatedSlugs: [
         "walkbyfaith-mini-program",
-        "taskapi-go-rest"
+        "taskapi-go-rest",
+        "walkbyfaith-feature-breakdown"
       ]
     },
     {
@@ -100,8 +101,62 @@ window.siteData = {
         "weui-miniprogram"
       ],
       relatedSlugs: [
+        "walkbyfaith-feature-breakdown",
         "d-drive-project-deck-refresh",
         "taskapi-go-rest"
+      ]
+    },
+    {
+      slug: "walkbyfaith-feature-breakdown",
+      badge: "Feature Breakdown",
+      status: "Deep Dive",
+      category: "Mini Program",
+      title: "WalkByFaith 继续细拆：主页、我的页、自定义 tabBar 已经够你写成一条完整案例",
+      excerpt: "这次不只说它存在，而是把能确认的页面结构、组件依赖和移动端价值拆开讲。",
+      meta: "2026.04 / 6 min read",
+      date: "2026-04-18",
+      readTime: "6 min read",
+      orbit: "Orbit W2",
+      linkLabel: "Read Detail",
+      summary: "WalkByFaith 不该只停留在“有个微信小程序目录”这种级别。现在能确认的证据已经足够把它写成一条更完整的案例：项目配置了主页与我的页、自定义 tabBar、weui-miniprogram 组件，并且 project.config.json 也说明它就是一个实际的小程序工程。",
+      deck: [
+        "不是只有 app.json，而是明确看到了页面入口和组件依赖。",
+        "custom tabBar 说明它不是只用默认壳子糊出来的。",
+        "这类项目最适合继续补截图和流程图，作品感提升会非常直接。"
+      ],
+      sections: [
+        {
+          title: "已经确认到的页面骨架",
+          paragraphs: [
+            "app.json 里直接列出了 pages/home_page/index 和 pages/my_page/index，说明至少存在首页和我的页两条主路径。",
+            "tabBar 配置为 custom: true，并把“主页”和“我的”作为底部入口，这种结构已经很适合写成移动端产品案例。"
+          ]
+        },
+        {
+          title: "组件依赖说明了什么",
+          paragraphs: [
+            "当前 usingComponents 里可见 mp-dialog、mp-actionSheet、mp-icon，同时 useExtendedLib 开启了 weui。",
+            "这至少说明它不是只停在页面骨架，而是已经开始接组件能力和交互层。"
+          ]
+        },
+        {
+          title: "为什么它值得被深化",
+          paragraphs: [
+            "因为它是少数天然适合手机端叙事的真实项目。你的网站现在正往 H5 优先走，这个项目放进去会非常顺。",
+            "后面只要再补两三张页面截图和关键交互说明，它就能从“目录证明”升级成真正能打的作品卡。"
+          ]
+        }
+      ],
+      callout: "能确认到页面入口、组件依赖和 tabBar 的小程序，已经不该只被一句话带过。",
+      keypoints: [
+        "home_page + my_page",
+        "custom tabBar",
+        "weui + dialog + actionsheet"
+      ],
+      relatedSlugs: [
+        "walkbyfaith-mini-program",
+        "d-drive-project-deck-refresh",
+        "taskapi-runtime-breakdown"
       ]
     },
     {
@@ -152,8 +207,62 @@ window.siteData = {
         "internal 分层 + 测试"
       ],
       relatedSlugs: [
+        "taskapi-runtime-breakdown",
         "d-drive-project-deck-refresh",
         "walkbyfaith-mini-program"
+      ]
+    },
+    {
+      slug: "taskapi-runtime-breakdown",
+      badge: "Engineering Detail",
+      status: "Deep Dive",
+      category: "Backend",
+      title: "TaskAPI 继续细拆：运行方式、接口习惯和工程信号已经足够当后端案例",
+      excerpt: "go.mod、README 和运行命令都清楚，已经不只是“有个 Go 项目”这么简单。",
+      meta: "2026.04 / 6 min read",
+      date: "2026-04-18",
+      readTime: "6 min read",
+      orbit: "Orbit G2",
+      linkLabel: "Read Detail",
+      summary: "TaskAPI 目前已经具备很完整的对外描述基础：go.mod 明确是 Go 1.21，依赖 Gin 与 Viper；README 直接写出 go run ./cmd/server、/ping、/api/v1/tasks 和 /debug/pprof。这种项目完全可以从“接口项目”继续深化为“后端工程案例”。",
+      deck: [
+        "运行命令、接口前缀、调试入口都清楚。",
+        "Go 1.21 + Gin + Viper 的组合已经能说明工程方向。",
+        "只要继续补几段请求/响应示例，这条案例就很完整了。"
+      ],
+      sections: [
+        {
+          title: "运行与依赖已经足够清楚",
+          paragraphs: [
+            "README 明确写出 go mod tidy 与 go run ./cmd/server，说明项目不是一个只给你看源码但不告诉你怎么跑的死仓库。",
+            "go.mod 也已经确认 module taskapi、go 1.21，并依赖 gin-gonic/gin 与 spf13/viper，这些都能直接写进详情页。"
+          ]
+        },
+        {
+          title: "接口层为什么值得单独讲",
+          paragraphs: [
+            "健康检查 /ping、任务接口前缀 /api/v1/tasks、调试入口 /debug/pprof 都已经在 README 明示。",
+            "这意味着你后面只需要再加几段典型请求示例，就能把它从“项目说明”升级成“接口作品展示”。"
+          ]
+        },
+        {
+          title: "它和首页内容怎么配合",
+          paragraphs: [
+            "首页仍然只负责告诉访客：你做过一个 Go + Gin 的任务管理 API。",
+            "真正体现含金量的运行说明、接口习惯和工程信号，就应该沉到这一层详情页里。"
+          ]
+        }
+      ],
+      callout: "能把怎么跑、怎么测、接口在哪说清楚的后端项目，已经比大多数空话站点强一截。",
+      keypoints: [
+        "go run ./cmd/server",
+        "/api/v1/tasks + /debug/pprof",
+        "Go 1.21 + Gin + Viper"
+      ],
+      relatedSlugs: [
+        "taskapi-go-rest",
+        "walkbyfaith-feature-breakdown",
+        "d-drive-project-deck-refresh"
       ]
     },
     {
@@ -204,7 +313,7 @@ window.siteData = {
         "放入工程实验层"
       ],
       relatedSlugs: [
-        "d-drive-project-deck-refresh",
+        "java-and-framework-labs",
         "taskapi-go-rest"
       ]
     },
@@ -256,7 +365,7 @@ window.siteData = {
         "Cocos TypeScript 框架实验"
       ],
       relatedSlugs: [
-        "d-drive-project-deck-refresh",
+        "taskapi-runtime-breakdown",
         "cocos-plane-and-android-labs"
       ]
     }
@@ -273,21 +382,21 @@ window.siteData = {
     },
     {
       badge: "WeChat Mini Program",
-      status: "Build",
-      title: "WalkByFaith 微信小程序",
-      excerpt: "目录内确认有主页、我的页、自定义 tabBar 与 weui-miniprogram 依赖，适合放在首页前排展示。",
-      meta: "WeChat / Mini Program / weui",
+      status: "Deep Dive",
+      title: "WalkByFaith 页面结构拆解",
+      excerpt: "主页、我的页、自定义 tabBar、weui 组件依赖都已确认，已经够写成完整移动端案例。",
+      meta: "WeChat / Mini Program / Detail",
       linkLabel: "查看详情",
-      href: "article.html?slug=walkbyfaith-mini-program"
+      href: "article.html?slug=walkbyfaith-feature-breakdown"
     },
     {
       badge: "Backend API",
-      status: "Ready",
-      title: "TaskAPI 任务管理接口",
-      excerpt: "Go + Gin REST API，带 pprof、优雅关停和测试文件，能清楚体现工程结构。",
-      meta: "Go / Gin / REST API",
+      status: "Deep Dive",
+      title: "TaskAPI 运行与接口拆解",
+      excerpt: "Go 1.21、Gin、Viper、/api/v1/tasks、/debug/pprof 都已确认，适合当作后端工程案例。",
+      meta: "Go / Gin / API / Detail",
       linkLabel: "查看详情",
-      href: "article.html?slug=taskapi-go-rest"
+      href: "article.html?slug=taskapi-runtime-breakdown"
     },
     {
       badge: "Game Experiment",
@@ -302,7 +411,7 @@ window.siteData = {
       badge: "Android Lab",
       status: "Scan",
       title: "TestAlipay + InterestingChange",
-      excerpt: "Android 实验目录已确认有多模块与 demo 工程结构，先按实验层展示，别乱包装。",
+      excerpt: "TestAlipay 已确认 app、test、kmqy 多模块与支付宝/微信 SDK 依赖；InterestingChange 先保持实验分类。",
       meta: "Android / Gradle / Lab",
       linkLabel: "查看详情",
       href: "article.html?slug=cocos-plane-and-android-labs"
@@ -328,10 +437,10 @@ window.siteData = {
       href: "article.html?slug=d-drive-project-deck-refresh"
     },
     {
-      badge: "D: Drive",
-      status: "Scan",
-      title: "已确认的真实来源扩展到 WalkByFaith、taskapi、cocos_plane、TestAlipay、InterestingChange、langchai4j、nest、OpenTGX。",
-      excerpt: "这些目录都实际存在，并且能看到关键文件结构。只是分类会更老实，不会全都硬说成成品。",
+      badge: "Deep Dive",
+      status: "Added",
+      title: "WalkByFaith 和 TaskAPI 现在不只“存在”，已经补成两条更像案例的详情入口。",
+      excerpt: "一个往移动端页面结构走，一个往后端工程细节走，首页的项目卡也顺手更像作品集。",
       meta: "Note 02",
       linkLabel: "打开项目",
       href: "archive.html"
@@ -339,8 +448,8 @@ window.siteData = {
     {
       badge: "Next",
       status: "Queue",
-      title: "后面继续补 Java / Android / Cocos 细节页，但继续维持诚实分层。",
-      excerpt: "先把确认过的内容上线，证据不足的部分老实放到学习样例或框架实验层，省得吹过头。",
+      title: "后面继续补 Android / Java / Cocos 细节页，但继续维持诚实分层。",
+      excerpt: "先把证据最足的项目做深，再回头补实验和学习样例，不然全站容易重新变回泛泛而谈。",
       meta: "Note 03",
       linkLabel: "打开归档",
       href: "archive.html"
@@ -359,8 +468,8 @@ window.siteData = {
     },
     {
       date: "PHASE 03",
-      title: "首页只负责分发，深内容下沉归档",
-      description: "把项目卡片放前面，把细节说明留给归档页和详情页，手机阅读路径更清晰。"
+      title: "开始把证据最足的项目深化成案例",
+      description: "先把 WalkByFaith 和 TaskAPI 深化，继续把目录证明升级成真正能点开的项目内容。"
     }
   ],
   apiBlueprint: [
@@ -376,13 +485,13 @@ window.siteData = {
     },
     {
       method: "DETAIL",
-      path: "/article?slug=...",
-      description: "详情页负责项目/文章的完整描述，首页不再硬塞长段说明。"
+      path: "/article?slug=walkbyfaith-feature-breakdown",
+      description: "补强后的移动端项目详情入口，专门承接 WalkByFaith 的页面结构与组件信息。"
     },
     {
-      method: "QUEUE",
-      path: "/next-sync/java-android",
-      description: "Java、Android 与框架实验目录已进入待补充队列，后面继续扩内容。"
+      method: "DETAIL",
+      path: "/article?slug=taskapi-runtime-breakdown",
+      description: "补强后的后端项目详情入口，专门承接 TaskAPI 的运行与接口说明。"
     }
   ]
 };
