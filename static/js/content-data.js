@@ -1,6 +1,58 @@
 window.siteData = {
   posts: [
     {
+      slug: "project-index-from-d-drive",
+      badge: "Project Index",
+      status: "Live",
+      category: "Projects",
+      title: "把 D 盘项目目录整理成个人网站内容，而不是继续堆空文案",
+      excerpt: "这次不是再修一层视觉，而是直接从 D 盘的 Project 目录里抽真实项目，整理成可以展示在个人站点里的内容。",
+      meta: "2026.04 / 7 min read",
+      date: "2026-04-18",
+      readTime: "7 min read",
+      orbit: "Orbit D1",
+      linkLabel: "Read Protocol",
+      summary: "网站之前的问题不是完全没字，而是缺少来自真实项目目录的内容输入。通过盘点 D 盘里的 Project Android、Go、Vue、WeChat、Cocos、ESP32-S3 等目录，可以把个人站点从模板展示页拉回到真正的项目归档页。",
+      deck: [
+        "真实项目比抽象口号更能定义个人主页。",
+        "先区分自己的项目、实验项目和第三方仓库，别乱吹。",
+        "网站内容的核心不是编文案，而是整理已有产出。"
+      ],
+      sections: [
+        {
+          title: "为什么之前的网站看起来像空的",
+          paragraphs: [
+            "问题不在于页面上一点字都没有，而在于那些内容没有真正来自你的项目目录。它们更像一套漂亮但抽象的站点语气，缺少“你到底做过什么”的证据。",
+            "一旦首页和归档页没有接住真实项目，站点就会显得像模板演示页：气氛有了，人物没进场。"
+          ]
+        },
+        {
+          title: "这次实际从 D 盘里抽到了什么",
+          paragraphs: [
+            "当前已经确认的可用内容包括：www.shizhou.top 个人站点本身、WalkByFaith 微信小程序、Go 的 TaskAPI、Cocos 的 cocos_plane 飞机大战，以及 OpenTGX 这类游戏框架实验。",
+            "另外还有 Android 集成实验、Java 的 Spring Boot / LangChain4j 后端练习、ESP32-S3 方向的硬件实验目录，但其中一部分混有第三方开源仓库或模板项目，展示时要老实标注成学习来源或实验样本。"
+          ]
+        },
+        {
+          title: "站点内容应该怎么组织",
+          paragraphs: [
+            "首页适合放正在做的代表项目和短讯；归档页适合放更完整的项目说明、技术栈、阶段状态和后续路线。这样内容才有层次，不会所有东西都挤成一个发光公告板。",
+            "真正可持续的做法，是继续把 D 盘项目按“个人作品 / 工程实验 / 学习样例”三类整理进数据源。这样以后每次做完一个东西，都能顺手塞进站里，而不是再临时编故事。"
+          ]
+        }
+      ],
+      callout: "个人站点要有内容感，靠的不是会发光的标题，而是你真的做过什么。",
+      keypoints: [
+        "从 D 盘项目目录提炼内容",
+        "区分个人项目与第三方样例",
+        "让网站变成真实项目归档"
+      ],
+      relatedSlugs: [
+        "control-room-architecture",
+        "ai-workflow-unified-rail"
+      ]
+    },
+    {
       slug: "control-room-architecture",
       badge: "Product Log",
       status: "Live",
@@ -159,59 +211,59 @@ window.siteData = {
   ],
   projects: [
     {
-      badge: "Project Core",
-      status: "Stable",
-      title: "Neural Archive",
-      excerpt: "当前主页项目，本地静态渲染，后续可切换为文章 API、项目 API 和状态 API 驱动。",
-      meta: "Static Front / Ready for API",
-      linkLabel: "Inspect Node",
+      badge: "Personal Site",
+      status: "Live",
+      title: "www.shizhou.top 个人站点",
+      excerpt: "当前在持续把 D 盘里的真实项目、实验记录和开发轨迹整理进站点，而不是继续摆一层会发光的空壳。",
+      meta: "Vue / Static Site / Ongoing",
+      linkLabel: "查看归档",
       href: "archive.html"
     },
     {
-      badge: "Interface Study",
-      status: "Draft",
-      title: "Control Panel UI Kit",
-      excerpt: "为后续文章详情、归档页和项目详情页准备统一的控制台式卡片和信息层级。",
-      meta: "Design System / In Progress",
-      linkLabel: "View Layer",
+      badge: "WeChat Mini Program",
+      status: "Build",
+      title: "WalkByFaith 微信小程序",
+      excerpt: "一个带自定义 tabBar 的微信小程序项目，当前已具备主页与我的页面结构，使用 weui-miniprogram 组件体系。",
+      meta: "WeChat / Mini Program / weui",
+      linkLabel: "查看归档",
       href: "archive.html"
     },
     {
-      badge: "Automation",
-      status: "Queued",
-      title: "Content Pipeline",
-      excerpt: "计划接入 CMS 或自建接口，将日志、短讯、时间线统一转为可部署的数据源。",
-      meta: "CMS / API / Cache",
-      linkLabel: "Queue Route",
+      badge: "Backend API",
+      status: "Ready",
+      title: "TaskAPI 任务管理接口",
+      excerpt: "Go + Gin 的任务管理 REST API，包含路由、中间件、内存存储、pprof、优雅关停和单元测试，属于能拿来展示工程习惯的项目。",
+      meta: "Go / Gin / REST API",
+      linkLabel: "查看归档",
       href: "archive.html"
     }
   ],
   notes: [
     {
-      badge: "Short Signal",
-      status: "Ping",
-      title: "现在的首页已经可以当个人名片，不必再像公司官网。",
-      excerpt: "视觉和文案都转向个人表达，进入站点后就能知道你在研究什么、输出什么。",
+      badge: "Project Signal",
+      status: "Scan",
+      title: "D 盘里不是没内容，是项目素材一直没被整理进网站。",
+      excerpt: "Project Android、Go、Vue、WeChat、Cocos、ESP32-S3 这些目录本来就是现成材料，之前站里缺的是提炼，不是字数。",
       meta: "Note 01",
-      linkLabel: "Open Archive",
+      linkLabel: "打开归档",
       href: "archive.html"
     },
     {
-      badge: "Short Signal",
-      status: "Ping",
-      title: "本地对象就是未来 API 的字段契约。",
-      excerpt: "只要返回数据结构相同，渲染层几乎不用改，迁移成本会很低。",
+      badge: "Project Signal",
+      status: "Scan",
+      title: "WalkByFaith、TaskAPI、cocos_plane 这类项目，才是站点该展示的真实内容。",
+      excerpt: "比起继续写抽象概念文案，把你已经做过的项目讲清楚，网站立刻就像个人主页，不像模板试衣间。",
       meta: "Note 02",
-      linkLabel: "Review Schema",
+      linkLabel: "查看结构",
       href: "archive.html"
     },
     {
-      badge: "Short Signal",
-      status: "Ping",
-      title: "科幻感来自世界观和秩序，不只是发光效果。",
-      excerpt: "如果信息架构混乱，再多特效也会像模板站。这一版先把秩序搭起来。",
+      badge: "Project Signal",
+      status: "Scan",
+      title: "ESP32 和 Unity 目录里混有第三方或模板内容，不能一股脑都算成你的成果。",
+      excerpt: "真实展示比乱吹靠谱。该写你做的，第三方仓库和教程模板就老老实实标成学习/实验来源。",
       meta: "Note 03",
-      linkLabel: "Open Archive",
+      linkLabel: "打开归档",
       href: "archive.html"
     }
   ],
