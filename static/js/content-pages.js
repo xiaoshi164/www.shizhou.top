@@ -69,6 +69,24 @@ function renderResponsiveImage(src, alt, className = "") {
   return `<div class="${escapeHtml(className)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt || "Project visual")}" loading="lazy"></div>`;
 }
 
+function renderArchiveVisual(post) {
+  const visual = post.cover || (Array.isArray(post.gallery) ? post.gallery[0]?.src : "");
+  if (!visual) {
+    return "";
+  }
+
+  const alt = post.coverAlt || (Array.isArray(post.gallery) ? post.gallery[0]?.alt : "") || post.title;
+  return `
+    <div class="archive-card-media">
+      <img src="${escapeHtml(visual)}" alt="${escapeHtml(alt)}" loading="lazy">
+      <div class="archive-card-media-overlay">
+        <span class="archive-card-media-chip">${escapeHtml(post.category)}</span>
+        <span class="archive-card-media-chip subtle">${escapeHtml(post.status)}</span>
+      </div>
+    </div>
+  `;
+}
+
 function renderGallerySection(article) {
   if (!Array.isArray(article.gallery) || !article.gallery.length) {
     return "";
@@ -171,7 +189,7 @@ function renderArchivePage() {
     }
 
     gridRoot.innerHTML = filteredPosts.map((post) => {
-      const image = renderResponsiveImage(post.cover, post.coverAlt || post.title, "archive-card-media");
+      const image = renderArchiveVisual(post);
 
       return `
       <article class="archive-card">

@@ -1,4 +1,3 @@
-globalThis.window = globalThis.window || {};
 window.siteData = {
   posts: [
     {
@@ -14,6 +13,20 @@ window.siteData = {
       orbit: "Orbit M1",
       linkLabel: "Read Detail",
       summary: "旧首页的问题有两个：一是桌面感太重，H5 上读起来不顺；二是 D 盘真实项目没进入主内容层。现在这一版先按移动端阅读路径重排，再把 WalkByFaith、TaskAPI、cocos_plane、TestAlipay、InterestingChange、langchai4j/demo1、nest 与 OpenTGX 等真实目录整理进数据源。",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230b1020'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2312192c'/><stop offset='100%' stop-color='%23070a14'/></linearGradient></defs><rect x='36' y='36' width='1528' height='928' rx='42' fill='url(%23g)' stroke='rgba(255,255,255,0.08)'/><rect x='110' y='120' width='1380' height='120' rx='28' fill='%23101524' stroke='%23283556'/><circle cx='180' cy='180' r='16' fill='%236f7cff'/><circle cx='232' cy='180' r='16' fill='%234cd6b8'/><circle cx='284' cy='180' r='16' fill='%23ffb86c'/><rect x='110' y='292' width='520' height='470' rx='34' fill='%230d1324' stroke='%2323304f'/><rect x='152' y='344' width='300' height='34' rx='17' fill='%236f7cff' fill-opacity='0.22'/><rect x='152' y='408' width='430' height='26' rx='13' fill='%23ecf1ff'/><rect x='152' y='454' width='378' height='26' rx='13' fill='%23aeb8d6'/><rect x='152' y='528' width='210' height='160' rx='24' fill='%23152134'/><rect x='392' y='528' width='190' height='160' rx='24' fill='%23131d32'/><rect x='694' y='292' width='702' height='470' rx='34' fill='%230a0f1f' stroke='%23253658'/><rect x='760' y='360' width='572' height='48' rx='24' fill='%23f5f7fb'/><rect x='760' y='434' width='420' height='26' rx='13' fill='%23a8b3d1'/><rect x='760' y='494' width='504' height='26' rx='13' fill='%23a8b3d1'/><rect x='760' y='586' width='572' height='108' rx='28' fill='%23131c31'/><rect x='110' y='808' width='1286' height='82' rx='28' fill='%230e1528' stroke='%23232f50'/><text x='152' y='865' fill='%23f5f7fb' font-size='38' font-family='Arial, sans-serif'>www.shizhou.top / H5 content refresh</text></svg>",
+      coverAlt: "站点 H5 改版的生成视觉：移动端优先的信息流与项目卡控制台布局",
+      gallery: [
+        {
+          src: "/static/images/projects/walkbyfaith-cover.png",
+          alt: "WalkByFaith 项目中的真实图标素材",
+          caption: "真实素材：WalkByFaith 项目目录内已有图标资源，已同步进站内视觉池。"
+        },
+        {
+          src: "/static/images/projects/cocos-plane-cover.png",
+          alt: "cocos_plane 项目的真实游戏画面素材",
+          caption: "真实素材：cocos_plane 的游戏实验画面，可直接作为站点项目卡视觉来源。"
+        }
+      ],
       deck: [
         "H5 首页先讲清楚内容，不先炫结构。",
         "真实项目目录比抽象文案重要得多。",
@@ -67,18 +80,13 @@ window.siteData = {
       orbit: "Orbit W1",
       linkLabel: "Read Detail",
       summary: "WalkByFaith 位于 /mnt/d/Project WeChat/WalkByFaith，已经具备 app.js、app.json、自定义 tabBar 和 pages 结构。它很适合放在首页前排，因为这是明显面向移动端体验的真实项目。",
-      cover: "static/images/projects/walkbyfaith-cover.png",
-      coverAlt: "WalkByFaith 小程序组件图标封面",
+      cover: "/static/images/projects/walkbyfaith-cover.png",
+      coverAlt: "WalkByFaith 项目目录中的真实图标素材",
       gallery: [
         {
-          src: "static/images/projects/walkbyfaith-cover.png",
-          alt: "WalkByFaith 组件入口图标",
-          caption: "来自项目 image 目录，至少说明这个小程序已经整理了组件入口视觉资源。"
-        },
-        {
-          src: "static/images/projects/walkbyfaith-detail-api.png",
-          alt: "WalkByFaith API 图标",
-          caption: "项目内 API 图标资源，可作为详情页的辅助视觉，不再只剩文字。"
+          src: "/static/images/projects/walkbyfaith-detail-api.png",
+          alt: "WalkByFaith 项目中的 API 图标素材",
+          caption: "真实素材：来自 WalkByFaith 项目目录的 API 图标，用来补强小程序结构细节。"
         }
       ],
       deck: [
@@ -134,18 +142,13 @@ window.siteData = {
       orbit: "Orbit W2",
       linkLabel: "Read Detail",
       summary: "WalkByFaith 不该只停留在“有个微信小程序目录”这种级别。现在能确认的证据已经足够把它写成一条更完整的案例：项目配置了主页与我的页、自定义 tabBar、weui-miniprogram 组件，并且 project.config.json 也说明它就是一个实际的小程序工程。",
-      cover: "static/images/projects/walkbyfaith-cover.png",
-      coverAlt: "WalkByFaith 深化详情封面",
+      cover: "/static/images/projects/walkbyfaith-detail-api.png",
+      coverAlt: "WalkByFaith 小程序的真实 API 图标素材",
       gallery: [
         {
-          src: "static/images/projects/walkbyfaith-cover.png",
-          alt: "WalkByFaith 首页组件图",
-          caption: "封面直接取自项目 image 目录，至少不是我凭空画出来的假图。"
-        },
-        {
-          src: "static/images/projects/walkbyfaith-detail-api.png",
-          alt: "WalkByFaith API 图标资源",
-          caption: "API 图标能让详情页先有真实视觉锚点，后面再补正式页面截图。"
+          src: "/static/images/projects/walkbyfaith-cover.png",
+          alt: "WalkByFaith 项目中的组件图标素材",
+          caption: "真实素材：同一项目中的图标资源，虽然不是截图，但确实来自项目本体。"
         }
       ],
       deck: [
@@ -201,13 +204,13 @@ window.siteData = {
       orbit: "Orbit G1",
       linkLabel: "Read Detail",
       summary: "TaskAPI 位于 /mnt/d/Project Go/taskapi。README 已明确写出 Gin 路由、中间件、并发安全内存存储、pprof、优雅关停与单元测试，这种项目就该放进站里撑住“你真的做过工程”的部分。",
-      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / GO BACKEND</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>go run ./cmd/server</text><text x='92' y='290' fill='%238cff8a' font-size='24' font-family='monospace'>GET /ping</text><text x='92' y='338' fill='%238cff8a' font-size='24' font-family='monospace'>GET /api/v1/tasks</text><text x='92' y='386' fill='%23ff9c54' font-size='24' font-family='monospace'>GET /debug/pprof</text><text x='92' y='490' fill='%239ab5c5' font-size='22' font-family='monospace'>gin-gonic/gin + spf13/viper + graceful shutdown</text></svg>",
-      coverAlt: "TaskAPI 终端风工程封面",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230b0f18'/><rect x='42' y='42' width='1516' height='916' rx='40' fill='%230d1320' stroke='%23273958'/><rect x='110' y='110' width='1380' height='110' rx='28' fill='%23111b2d'/><text x='150' y='180' fill='%236f7cff' font-size='42' font-family='Arial, sans-serif'>taskapi / gin / viper / pprof</text><rect x='110' y='270' width='640' height='560' rx='34' fill='%23091319' stroke='%231c5b63'/><text x='154' y='348' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /ping</text><text x='154' y='412' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>{ status: &quot;ok&quot; }</text><text x='154' y='520' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /api/v1/tasks</text><text x='154' y='584' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>[]</text><text x='154' y='692' fill='%23ffb86c' font-size='34' font-family='Courier New, monospace'>/debug/pprof</text><rect x='820' y='270' width='670' height='560' rx='34' fill='%23101727' stroke='%23283857'/><rect x='888' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='932' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Router</text><rect x='1140' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='1186' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Store</text><rect x='1014' y='500' width='220' height='92' rx='24' fill='%23172034'/><text x='1062' y='556' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Service</text><path d='M1108 432 L1108 500' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><path d='M1140 546 L1234 546' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><text x='110' y='900' fill='%239da3b0' font-size='30' font-family='Arial, sans-serif'>生成视觉：项目本体无截图，明确用 API 控制台示意图承接后端文章卡片</text></svg>",
+      coverAlt: "TaskAPI 的生成视觉：Go + Gin 后端接口控制台示意图",
       gallery: [
         {
-          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / GO BACKEND</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>go run ./cmd/server</text><text x='92' y='290' fill='%238cff8a' font-size='24' font-family='monospace'>GET /ping</text><text x='92' y='338' fill='%238cff8a' font-size='24' font-family='monospace'>GET /api/v1/tasks</text><text x='92' y='386' fill='%23ff9c54' font-size='24' font-family='monospace'>GET /debug/pprof</text><text x='92' y='490' fill='%239ab5c5' font-size='22' font-family='monospace'>gin-gonic/gin + spf13/viper + graceful shutdown</text></svg>",
-          alt: "TaskAPI 工程能力封面",
-          caption: "这张不是项目截图，而是根据 README 已确认的信息做的代码风封面，用来解决后端项目没图的问题。"
+          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%230a0f18'/><rect x='48' y='48' width='1104' height='664' rx='36' fill='%230f1726' stroke='%23283556'/><text x='96' y='126' fill='%23f5f7fb' font-size='36' font-family='Arial, sans-serif'>TaskAPI request flow</text><rect x='104' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='154' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Client</text><rect x='478' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='536' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Gin</text><rect x='850' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='900' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Store</text><path d='M344 259 H478' stroke='%234cd6b8' stroke-width='8' stroke-linecap='round'/><path d='M718 259 H850' stroke='%234cd6b8' stroke-width='8' stroke-linecap='round'/><rect x='104' y='404' width='986' height='222' rx='30' fill='%230d1321'/><text x='144' y='482' fill='%23ecf1ff' font-size='30' font-family='Courier New, monospace'>GET /api/v1/tasks</text><text x='144' y='544' fill='%239da3b0' font-size='28' font-family='Courier New, monospace'>200 OK / JSON / graceful shutdown / pprof</text></svg>",
+          alt: "TaskAPI 请求链路的生成示意图",
+          caption: "生成视觉：项目内没有截图，这里明确用接口链路图来承接文章说明。"
         }
       ],
       deck: [
@@ -263,13 +266,13 @@ window.siteData = {
       orbit: "Orbit G2",
       linkLabel: "Read Detail",
       summary: "TaskAPI 目前已经具备很完整的对外描述基础：go.mod 明确是 Go 1.21，依赖 Gin 与 Viper；README 直接写出 go run ./cmd/server、/ping、/api/v1/tasks 和 /debug/pprof。这种项目完全可以从“接口项目”继续深化为“后端工程案例”。",
-      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / RUNTIME DETAIL</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>Go 1.21</text><text x='92' y='286' fill='%238cff8a' font-size='24' font-family='monospace'>gin-gonic/gin</text><text x='92' y='334' fill='%238cff8a' font-size='24' font-family='monospace'>spf13/viper</text><text x='92' y='414' fill='%23ff9c54' font-size='24' font-family='monospace'>/api/v1/tasks  /debug/pprof</text></svg>",
-      coverAlt: "TaskAPI 运行细节封面",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230a0f18'/><rect x='44' y='44' width='1512' height='912' rx='40' fill='%230d1320' stroke='%23273958'/><text x='120' y='152' fill='%23f5f7fb' font-size='44' font-family='Arial, sans-serif'>TaskAPI runtime breakdown</text><rect x='118' y='230' width='540' height='596' rx='34' fill='%230f182a'/><text x='166' y='314' fill='%239da3b0' font-size='30' font-family='Courier New, monospace'>$ go run ./cmd/server</text><text x='166' y='392' fill='%234cd6b8' font-size='30' font-family='Courier New, monospace'>listen :8080</text><text x='166' y='470' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>/ping</text><text x='166' y='530' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>/api/v1/tasks</text><text x='166' y='590' fill='%23ffb86c' font-size='30' font-family='Courier New, monospace'>/debug/pprof</text><rect x='736' y='230' width='700' height='596' rx='34' fill='%23091319' stroke='%231c5b63'/><rect x='804' y='304' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='356' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>Go 1.21</text><rect x='804' y='430' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='482' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>Gin + Viper</text><rect x='804' y='556' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='608' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>graceful shutdown</text><text x='120' y='896' fill='%239da3b0' font-size='30' font-family='Arial, sans-serif'>生成视觉：项目内无截图，明确用运行结构图表达后端工程信号</text></svg>",
+      coverAlt: "TaskAPI 运行结构的生成视觉：命令、接口和工程特征面板",
       gallery: [
         {
-          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%2307111f'/><rect x='56' y='56' width='1088' height='648' rx='28' fill='%230c2036' stroke='%235ceeff' stroke-opacity='.35'/><text x='92' y='150' fill='%235ceeff' font-size='40' font-family='monospace'>TASKAPI / RUNTIME DETAIL</text><text x='92' y='230' fill='%23e7fbff' font-size='28' font-family='monospace'>Go 1.21</text><text x='92' y='286' fill='%238cff8a' font-size='24' font-family='monospace'>gin-gonic/gin</text><text x='92' y='334' fill='%238cff8a' font-size='24' font-family='monospace'>spf13/viper</text><text x='92' y='414' fill='%23ff9c54' font-size='24' font-family='monospace'>/api/v1/tasks  /debug/pprof</text></svg>",
-          alt: "TaskAPI README 信息封面",
-          caption: "没现成截图，就先把 README 里已经核实的运行信息视觉化。至少这比一块空白文字墙强。"
+          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%230a0f18'/><rect x='56' y='56' width='1088' height='648' rx='34' fill='%230f1726' stroke='%23283556'/><text x='102' y='132' fill='%23f5f7fb' font-size='36' font-family='Arial, sans-serif'>TaskAPI routes</text><text x='104' y='252' fill='%234cd6b8' font-size='30' font-family='Courier New, monospace'>GET    /ping</text><text x='104' y='326' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>GET    /api/v1/tasks</text><text x='104' y='400' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>POST   /api/v1/tasks</text><text x='104' y='474' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>PUT    /api/v1/tasks/:id</text><text x='104' y='548' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>DELETE /api/v1/tasks/:id</text><text x='104' y='638' fill='%23ffb86c' font-size='28' font-family='Courier New, monospace'>/debug/pprof available</text></svg>",
+          alt: "TaskAPI 路由清单的生成视觉",
+          caption: "生成视觉：没有真实界面图，就直接把接口层信息可视化，不装成截图。"
         }
       ],
       deck: [
@@ -325,6 +328,20 @@ window.siteData = {
       orbit: "Orbit X2",
       linkLabel: "Read Detail",
       summary: "除了站点、小程序和 Go API，这次还确认了 /mnt/d/Project Cocos/Plane/cocos_plane、/mnt/d/Project Android/TestAlipay 与 /mnt/d/Project Android/InterestingChange 这类实验项目。它们未必需要放首页第一屏，但非常适合进入归档页，形成更完整的项目层次。",
+      cover: "/static/images/projects/cocos-plane-cover.png",
+      coverAlt: "cocos_plane 项目的真实游戏实验画面",
+      gallery: [
+        {
+          src: "/static/images/projects/cocos-plane-detail-gameover.png",
+          alt: "cocos_plane 项目的真实游戏结束界面",
+          caption: "真实素材：来自 cocos_plane 项目的游戏画面。"
+        },
+        {
+          src: "/static/images/projects/testalipay-cover.png",
+          alt: "TestAlipay 项目的真实应用图标素材",
+          caption: "真实素材：TestAlipay 目前能确认到的主要视觉证据是应用图标，不冒充成完整截图。"
+        }
+      ],
       deck: [
         "实验项目不用硬吹成正式产品。",
         "但只要是真做过的，就比模板句子值钱。",
@@ -377,6 +394,15 @@ window.siteData = {
       orbit: "Orbit J3",
       linkLabel: "Read Detail",
       summary: "这轮又补查了 /mnt/d/Project Java/langchai4j/demo1、/mnt/d/Project Java/nest 和 /mnt/d/Project Cocos/OpenTGX/OpenTGX。能确认它们确实有 Maven / Spring Boot / TypeScript Cocos 工程结构，但就现有证据来看，更适合被当作学习样例或框架实验，而不是直接包装成上线产品。",
+      cover: "/static/images/projects/opentgx-cover.png",
+      coverAlt: "OpenTGX 项目中的真实 logo 素材",
+      gallery: [
+        {
+          src: "/static/images/projects/opentgx-detail-logo.png",
+          alt: "OpenTGX 项目的真实文字 logo 素材",
+          caption: "真实素材：当前能确认的视觉主要来自 OpenTGX；langchai4j 与 nest 暂无截图，所以这里只老实展示已掌握的那部分。"
+        }
+      ],
       deck: [
         "能确认存在工程结构，但别乱拔高。",
         "Spring Boot + MongoDB + JWT 已经说明技术探索方向。",
