@@ -1,441 +1,248 @@
 window.siteData = {
   posts: [
     {
-      slug: "d-drive-project-deck-refresh",
-      badge: "Site Refresh",
-      status: "Live",
-      category: "Projects",
-      title: "把首页改成 H5 节奏，同时把 D 盘真实项目塞回站里",
-      excerpt: "这次不是再修视觉小毛病，而是直接承认旧首页不适合手机，也没有把 D 盘项目内容真正接进来。",
-      meta: "2026.04 / 6 min read",
-      date: "2026-04-18",
-      readTime: "6 min read",
-      orbit: "Orbit M1",
-      linkLabel: "Read Detail",
-      summary: "旧首页的问题有两个：一是桌面感太重，H5 上读起来不顺；二是 D 盘真实项目没进入主内容层。现在这一版先按移动端阅读路径重排，再把 WalkByFaith、TaskAPI、cocos_plane、TestAlipay、InterestingChange、langchai4j/demo1、nest 与 OpenTGX 等真实目录整理进数据源。",
-      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230b1020'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2312192c'/><stop offset='100%' stop-color='%23070a14'/></linearGradient></defs><rect x='36' y='36' width='1528' height='928' rx='42' fill='url(%23g)' stroke='rgba(255,255,255,0.08)'/><rect x='110' y='120' width='1380' height='120' rx='28' fill='%23101524' stroke='%23283556'/><circle cx='180' cy='180' r='16' fill='%236f7cff'/><circle cx='232' cy='180' r='16' fill='%234cd6b8'/><circle cx='284' cy='180' r='16' fill='%23ffb86c'/><rect x='110' y='292' width='520' height='470' rx='34' fill='%230d1324' stroke='%2323304f'/><rect x='152' y='344' width='300' height='34' rx='17' fill='%236f7cff' fill-opacity='0.22'/><rect x='152' y='408' width='430' height='26' rx='13' fill='%23ecf1ff'/><rect x='152' y='454' width='378' height='26' rx='13' fill='%23aeb8d6'/><rect x='152' y='528' width='210' height='160' rx='24' fill='%23152134'/><rect x='392' y='528' width='190' height='160' rx='24' fill='%23131d32'/><rect x='694' y='292' width='702' height='470' rx='34' fill='%230a0f1f' stroke='%23253658'/><rect x='760' y='360' width='572' height='48' rx='24' fill='%23f5f7fb'/><rect x='760' y='434' width='420' height='26' rx='13' fill='%23a8b3d1'/><rect x='760' y='494' width='504' height='26' rx='13' fill='%23a8b3d1'/><rect x='760' y='586' width='572' height='108' rx='28' fill='%23131c31'/><rect x='110' y='808' width='1286' height='82' rx='28' fill='%230e1528' stroke='%23232f50'/><text x='152' y='865' fill='%23f5f7fb' font-size='38' font-family='Arial, sans-serif'>www.shizhou.top / H5 content refresh</text></svg>",
-      coverAlt: "站点 H5 改版的生成视觉：移动端优先的信息流与项目卡控制台布局",
-      gallery: [
-        {
-          src: "/static/images/projects/walkbyfaith-cover.png",
-          alt: "WalkByFaith 项目中的真实图标素材",
-          caption: "真实素材：WalkByFaith 项目目录内已有图标资源，已同步进站内视觉池。"
-        },
-        {
-          src: "/static/images/projects/cocos-plane-cover.png",
-          alt: "cocos_plane 项目的真实游戏画面素材",
-          caption: "真实素材：cocos_plane 的游戏实验画面，可直接作为站点项目卡视觉来源。"
-        }
-      ],
-      deck: [
-        "H5 首页先讲清楚内容，不先炫结构。",
-        "真实项目目录比抽象文案重要得多。",
-        "以后新增项目，直接往结构化数据里补。"
-      ],
-      sections: [
-        {
-          title: "为什么旧首页不适合 H5",
-          paragraphs: [
-            "旧版首页在桌面看还行，到了手机上就像把一张海报硬压进窄屏里：模块太横向、信息密度不均、重要内容埋得太深。",
-            "移动端首页最怕的是读者划了半天还没看到你到底做过什么。那不是高级，是信息组织失职。"
-          ]
-        },
-        {
-          title: "这次真正接进来的 D 盘内容",
-          paragraphs: [
-            "当前已经确认并写进站点的数据源包括：/mnt/d/Project WeChat/WalkByFaith、/mnt/d/Project Go/taskapi、/mnt/d/Project Cocos/Plane/cocos_plane、/mnt/d/Project Android/TestAlipay、/mnt/d/Project Android/InterestingChange、/mnt/d/Project Java/langchai4j/demo1、/mnt/d/Project Java/nest、/mnt/d/Project Cocos/OpenTGX/OpenTGX，以及站点仓库本身。",
-            "其中 OpenTGX 明确写着“A fullstack game development solution using typescript”，更适合老实标成框架实验；Java 和 Android 里也有演示性质项目，所以展示时会分为真实作品、工程实验、学习样例，而不是统统吹成成品。"
-          ]
-        },
-        {
-          title: "首页应该承担什么",
-          paragraphs: [
-            "首页最重要的是三件事：快速说明你是谁、你最近在做什么、有哪些代表项目值得点进去。剩下的深内容交给归档页和详情页。",
-            "所以这版把首屏、项目卡片、目录来源、下一步计划重新排成单列流程，手机上读起来才像 H5，不像桌面截图。"
-          ]
-        }
-      ],
-      callout: "移动端首页别装高冷，先把项目亮出来。",
-      keypoints: [
-        "H5 优先重排",
-        "接入 D 盘真实项目",
-        "首页回归项目分发职责"
-      ],
-      relatedSlugs: [
-        "walkbyfaith-mini-program",
-        "taskapi-go-rest",
-        "walkbyfaith-feature-breakdown"
-      ]
-    },
-    {
-      slug: "walkbyfaith-mini-program",
+      slug: "walkbyfaith-feature-breakdown",
       badge: "WeChat Project",
-      status: "Build",
+      status: "Verified",
       category: "Mini Program",
-      title: "WalkByFaith：一个已经长出真实页面结构的微信小程序",
-      excerpt: "项目内有主页、我的页、自定义 tabBar，并接了 weui-miniprogram，不是空目录。",
+      title: "WalkByFaith 微信小程序结构整理",
+      excerpt: "已确认主页、我的页、自定义 tabBar 与 weui-miniprogram 组件接入，是一条证据最完整的移动端项目线。",
       meta: "2026.04 / 5 min read",
       date: "2026-04-18",
       readTime: "5 min read",
-      orbit: "Orbit W1",
+      orbit: "Orbit W2",
       linkLabel: "Read Detail",
-      summary: "WalkByFaith 位于 /mnt/d/Project WeChat/WalkByFaith，已经具备 app.js、app.json、自定义 tabBar 和 pages 结构。它很适合放在首页前排，因为这是明显面向移动端体验的真实项目。",
+      summary: "WalkByFaith 位于 /mnt/d/Project WeChat/WalkByFaith。当前已确认 app.js、app.json、project.config.json、custom-tab-bar 与 pages 目录，能明确说明这是一个真实的小程序工程，而不是空目录。",
       cover: "/static/images/projects/walkbyfaith-cover.png",
       coverAlt: "WalkByFaith 项目目录中的真实图标素材",
       gallery: [
         {
           src: "/static/images/projects/walkbyfaith-detail-api.png",
           alt: "WalkByFaith 项目中的 API 图标素材",
-          caption: "真实素材：来自 WalkByFaith 项目目录的 API 图标，用来补强小程序结构细节。"
+          caption: "真实素材：来自 WalkByFaith 项目目录。"
         }
       ],
       deck: [
-        "有页面结构，能说明项目不是空壳。",
-        "自定义 tabBar 说明做过界面层设计。",
-        "放在 H5 首页也合理，因为用户一眼就懂。"
+        "主页 + 我的页结构已确认。",
+        "custom tabBar 说明做过界面层设计。",
+        "适合作为首页前排的移动端项目入口。"
       ],
       sections: [
         {
-          title: "项目里实际看到了什么",
+          title: "已确认的工程结构",
           paragraphs: [
-            "目录里可以确认到 app.js、app.json、app.wxss、custom-tab-bar 和 pages 结构，不是只有一个 README 的假项目。",
-            "app.json 里已配置主页与我的页，并声明使用 weui-miniprogram 组件。"
+            "项目目录中可确认 app.js、app.json、app.wxss、custom-tab-bar 与 pages 结构。",
+            "app.json 已声明主页与我的页，并接入 weui-miniprogram 组件能力。"
           ]
         },
         {
-          title: "为什么它值得放首页",
+          title: "为什么值得放首页",
           paragraphs: [
-            "因为它天然适合移动端语境。用户看到微信小程序项目，会立刻明白这是实际在做的产品形态，而不是抽象概念。",
-            "而且它和现在网站的 H5 改版方向也一致：都在强调手机端阅读与交互。"
+            "这是天然适合移动端展示的真实项目，用户看到后能立刻理解项目形态。",
+            "相比抽象描述，真实的小程序工程结构更能直接说明做过什么。"
           ]
         },
         {
-          title: "后面还可以怎么补",
+          title: "当前展示策略",
           paragraphs: [
-            "下一步可以继续把页面截图、功能流程和具体模块拆出来，做成单独项目详情页。",
-            "这样它就不只是首页一张卡，而是一条完整案例。"
+            "首页只保留简短卡片与入口，详情页再展开页面结构和组件信息。",
+            "后续如果补到真实页面截图，可以继续增强这条项目案例。"
           ]
         }
       ],
-      callout: "有真实页面结构的小程序，比一百句‘我关注用户体验’都更有说服力。",
+      callout: "有真实页面结构的小程序，本身就是最有说服力的项目证据。",
       keypoints: [
         "主页 + 我的页",
-        "自定义 tabBar",
+        "custom tabBar",
         "weui-miniprogram"
       ],
       relatedSlugs: [
-        "walkbyfaith-feature-breakdown",
-        "d-drive-project-deck-refresh",
-        "taskapi-go-rest"
-      ]
-    },
-    {
-      slug: "walkbyfaith-feature-breakdown",
-      badge: "Feature Breakdown",
-      status: "Deep Dive",
-      category: "Mini Program",
-      title: "WalkByFaith 继续细拆：主页、我的页、自定义 tabBar 已经够你写成一条完整案例",
-      excerpt: "这次不只说它存在，而是把能确认的页面结构、组件依赖和移动端价值拆开讲。",
-      meta: "2026.04 / 6 min read",
-      date: "2026-04-18",
-      readTime: "6 min read",
-      orbit: "Orbit W2",
-      linkLabel: "Read Detail",
-      summary: "WalkByFaith 不该只停留在“有个微信小程序目录”这种级别。现在能确认的证据已经足够把它写成一条更完整的案例：项目配置了主页与我的页、自定义 tabBar、weui-miniprogram 组件，并且 project.config.json 也说明它就是一个实际的小程序工程。",
-      cover: "/static/images/projects/walkbyfaith-detail-api.png",
-      coverAlt: "WalkByFaith 小程序的真实 API 图标素材",
-      gallery: [
-        {
-          src: "/static/images/projects/walkbyfaith-cover.png",
-          alt: "WalkByFaith 项目中的组件图标素材",
-          caption: "真实素材：同一项目中的图标资源，虽然不是截图，但确实来自项目本体。"
-        }
-      ],
-      deck: [
-        "不是只有 app.json，而是明确看到了页面入口和组件依赖。",
-        "custom tabBar 说明它不是只用默认壳子糊出来的。",
-        "这类项目最适合继续补截图和流程图，作品感提升会非常直接。"
-      ],
-      sections: [
-        {
-          title: "已经确认到的页面骨架",
-          paragraphs: [
-            "app.json 里直接列出了 pages/home_page/index 和 pages/my_page/index，说明至少存在首页和我的页两条主路径。",
-            "tabBar 配置为 custom: true，并把“主页”和“我的”作为底部入口，这种结构已经很适合写成移动端产品案例。"
-          ]
-        },
-        {
-          title: "组件依赖说明了什么",
-          paragraphs: [
-            "当前 usingComponents 里可见 mp-dialog、mp-actionSheet、mp-icon，同时 useExtendedLib 开启了 weui。",
-            "这至少说明它不是只停在页面骨架，而是已经开始接组件能力和交互层。"
-          ]
-        },
-        {
-          title: "为什么它值得被深化",
-          paragraphs: [
-            "因为它是少数天然适合手机端叙事的真实项目。你的网站现在正往 H5 优先走，这个项目放进去会非常顺。",
-            "后面只要再补两三张页面截图和关键交互说明，它就能从“目录证明”升级成真正能打的作品卡。"
-          ]
-        }
-      ],
-      callout: "能确认到页面入口、组件依赖和 tabBar 的小程序，已经不该只被一句话带过。",
-      keypoints: [
-        "home_page + my_page",
-        "custom tabBar",
-        "weui + dialog + actionsheet"
-      ],
-      relatedSlugs: [
-        "walkbyfaith-mini-program",
-        "d-drive-project-deck-refresh",
-        "taskapi-runtime-breakdown"
-      ]
-    },
-    {
-      slug: "taskapi-go-rest",
-      badge: "Backend API",
-      status: "Ready",
-      category: "Backend",
-      title: "TaskAPI：Go + Gin 的任务管理接口，不是玩具文案",
-      excerpt: "README、go.mod 和 internal 目录都在，带 pprof、优雅关停和测试，工程味道够明显。",
-      meta: "2026.04 / 5 min read",
-      date: "2026-04-18",
-      readTime: "5 min read",
-      orbit: "Orbit G1",
-      linkLabel: "Read Detail",
-      summary: "TaskAPI 位于 /mnt/d/Project Go/taskapi。README 已明确写出 Gin 路由、中间件、并发安全内存存储、pprof、优雅关停与单元测试，这种项目就该放进站里撑住“你真的做过工程”的部分。",
-      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230b0f18'/><rect x='42' y='42' width='1516' height='916' rx='40' fill='%230d1320' stroke='%23273958'/><rect x='110' y='110' width='1380' height='110' rx='28' fill='%23111b2d'/><text x='150' y='180' fill='%236f7cff' font-size='42' font-family='Arial, sans-serif'>taskapi / gin / viper / pprof</text><rect x='110' y='270' width='640' height='560' rx='34' fill='%23091319' stroke='%231c5b63'/><text x='154' y='348' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /ping</text><text x='154' y='412' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>{ status: &quot;ok&quot; }</text><text x='154' y='520' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /api/v1/tasks</text><text x='154' y='584' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>[]</text><text x='154' y='692' fill='%23ffb86c' font-size='34' font-family='Courier New, monospace'>/debug/pprof</text><rect x='820' y='270' width='670' height='560' rx='34' fill='%23101727' stroke='%23283857'/><rect x='888' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='932' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Router</text><rect x='1140' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='1186' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Store</text><rect x='1014' y='500' width='220' height='92' rx='24' fill='%23172034'/><text x='1062' y='556' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Service</text><path d='M1108 432 L1108 500' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><path d='M1140 546 L1234 546' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><text x='110' y='900' fill='%239da3b0' font-size='30' font-family='Arial, sans-serif'>生成视觉：项目本体无截图，明确用 API 控制台示意图承接后端文章卡片</text></svg>",
-      coverAlt: "TaskAPI 的生成视觉：Go + Gin 后端接口控制台示意图",
-      gallery: [
-        {
-          src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%230a0f18'/><rect x='48' y='48' width='1104' height='664' rx='36' fill='%230f1726' stroke='%23283556'/><text x='96' y='126' fill='%23f5f7fb' font-size='36' font-family='Arial, sans-serif'>TaskAPI request flow</text><rect x='104' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='154' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Client</text><rect x='478' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='536' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Gin</text><rect x='850' y='204' width='240' height='110' rx='26' fill='%23152134'/><text x='900' y='270' fill='%236f7cff' font-size='34' font-family='Arial, sans-serif'>Store</text><path d='M344 259 H478' stroke='%234cd6b8' stroke-width='8' stroke-linecap='round'/><path d='M718 259 H850' stroke='%234cd6b8' stroke-width='8' stroke-linecap='round'/><rect x='104' y='404' width='986' height='222' rx='30' fill='%230d1321'/><text x='144' y='482' fill='%23ecf1ff' font-size='30' font-family='Courier New, monospace'>GET /api/v1/tasks</text><text x='144' y='544' fill='%239da3b0' font-size='28' font-family='Courier New, monospace'>200 OK / JSON / graceful shutdown / pprof</text></svg>",
-          alt: "TaskAPI 请求链路的生成示意图",
-          caption: "生成视觉：项目内没有截图，这里明确用接口链路图来承接文章说明。"
-        }
-      ],
-      deck: [
-        "README 直接写清楚能力边界。",
-        "有 internal 分层和测试文件，不是只搭了个 hello world。",
-        "适合当作后端能力展示入口。"
-      ],
-      sections: [
-        {
-          title: "为什么这个项目值得展示",
-          paragraphs: [
-            "因为它不仅有接口描述，还有 internal/config、handler、service、store 等目录和测试文件，说明结构是认真搭过的。",
-            "再加上 pprof 和优雅关停，这已经不是只会起一个端口的练手项目。"
-          ]
-        },
-        {
-          title: "首页该怎么讲它",
-          paragraphs: [
-            "首页不用把所有接口细节都讲完，只要明确它是一个 Go + Gin 的任务管理 API，并强调工程特性。",
-            "更详细的 API 示例、请求路径和测试习惯，放归档或详情页就够了。"
-          ]
-        },
-        {
-          title: "它对整站有什么意义",
-          paragraphs: [
-            "这类项目能补足站点过去太偏视觉和抽象叙事的问题。",
-            "有了它，首页不再只是“我会做界面”，而是能顺手证明你也会搭接口和维护结构。"
-          ]
-        }
-      ],
-      callout: "工程项目要讲结构和验证，不要只讲梦想。",
-      keypoints: [
-        "Gin REST API",
-        "pprof + 优雅关停",
-        "internal 分层 + 测试"
-      ],
-      relatedSlugs: [
         "taskapi-runtime-breakdown",
-        "d-drive-project-deck-refresh",
-        "walkbyfaith-mini-program"
+        "cocos-plane-and-android-labs"
       ]
     },
     {
       slug: "taskapi-runtime-breakdown",
-      badge: "Engineering Detail",
-      status: "Deep Dive",
+      badge: "Backend API",
+      status: "Verified",
       category: "Backend",
-      title: "TaskAPI 继续细拆：运行方式、接口习惯和工程信号已经足够当后端案例",
-      excerpt: "go.mod、README 和运行命令都清楚，已经不只是“有个 Go 项目”这么简单。",
+      title: "TaskAPI Go 接口项目整理",
+      excerpt: "README、go.mod、运行命令、接口前缀与 pprof 调试入口都已确认，适合当作后端工程案例。",
       meta: "2026.04 / 6 min read",
       date: "2026-04-18",
       readTime: "6 min read",
       orbit: "Orbit G2",
       linkLabel: "Read Detail",
-      summary: "TaskAPI 目前已经具备很完整的对外描述基础：go.mod 明确是 Go 1.21，依赖 Gin 与 Viper；README 直接写出 go run ./cmd/server、/ping、/api/v1/tasks 和 /debug/pprof。这种项目完全可以从“接口项目”继续深化为“后端工程案例”。",
+      summary: "TaskAPI 位于 /mnt/d/Project Go/taskapi。当前已确认 Go 1.21、Gin、Viper、/ping、/api/v1/tasks 与 /debug/pprof，说明这不是只起一个端口的练手项目，而是具备基础工程结构的后端项目。",
       cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230a0f18'/><rect x='44' y='44' width='1512' height='912' rx='40' fill='%230d1320' stroke='%23273958'/><text x='120' y='152' fill='%23f5f7fb' font-size='44' font-family='Arial, sans-serif'>TaskAPI runtime breakdown</text><rect x='118' y='230' width='540' height='596' rx='34' fill='%230f182a'/><text x='166' y='314' fill='%239da3b0' font-size='30' font-family='Courier New, monospace'>$ go run ./cmd/server</text><text x='166' y='392' fill='%234cd6b8' font-size='30' font-family='Courier New, monospace'>listen :8080</text><text x='166' y='470' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>/ping</text><text x='166' y='530' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>/api/v1/tasks</text><text x='166' y='590' fill='%23ffb86c' font-size='30' font-family='Courier New, monospace'>/debug/pprof</text><rect x='736' y='230' width='700' height='596' rx='34' fill='%23091319' stroke='%231c5b63'/><rect x='804' y='304' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='356' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>Go 1.21</text><rect x='804' y='430' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='482' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>Gin + Viper</text><rect x='804' y='556' width='566' height='82' rx='24' fill='%23141f33'/><text x='858' y='608' fill='%23f5f7fb' font-size='30' font-family='Arial, sans-serif'>graceful shutdown</text><text x='120' y='896' fill='%239da3b0' font-size='30' font-family='Arial, sans-serif'>生成视觉：项目内无截图，明确用运行结构图表达后端工程信号</text></svg>",
       coverAlt: "TaskAPI 运行结构的生成视觉：命令、接口和工程特征面板",
       gallery: [
         {
           src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 760'><rect width='1200' height='760' fill='%230a0f18'/><rect x='56' y='56' width='1088' height='648' rx='34' fill='%230f1726' stroke='%23283556'/><text x='102' y='132' fill='%23f5f7fb' font-size='36' font-family='Arial, sans-serif'>TaskAPI routes</text><text x='104' y='252' fill='%234cd6b8' font-size='30' font-family='Courier New, monospace'>GET    /ping</text><text x='104' y='326' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>GET    /api/v1/tasks</text><text x='104' y='400' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>POST   /api/v1/tasks</text><text x='104' y='474' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>PUT    /api/v1/tasks/:id</text><text x='104' y='548' fill='%236f7cff' font-size='30' font-family='Courier New, monospace'>DELETE /api/v1/tasks/:id</text><text x='104' y='638' fill='%23ffb86c' font-size='28' font-family='Courier New, monospace'>/debug/pprof available</text></svg>",
           alt: "TaskAPI 路由清单的生成视觉",
-          caption: "生成视觉：没有真实界面图，就直接把接口层信息可视化，不装成截图。"
+          caption: "生成视觉：项目无真实界面图，明确按接口信息可视化处理。"
         }
       ],
       deck: [
-        "运行命令、接口前缀、调试入口都清楚。",
-        "Go 1.21 + Gin + Viper 的组合已经能说明工程方向。",
-        "只要继续补几段请求/响应示例，这条案例就很完整了。"
+        "Go 1.21 + Gin + Viper 已确认。",
+        "接口前缀与调试入口已确认。",
+        "适合作为后端工程案例入口。"
       ],
       sections: [
         {
-          title: "运行与依赖已经足够清楚",
+          title: "已确认的运行信息",
           paragraphs: [
-            "README 明确写出 go mod tidy 与 go run ./cmd/server，说明项目不是一个只给你看源码但不告诉你怎么跑的死仓库。",
-            "go.mod 也已经确认 module taskapi、go 1.21，并依赖 gin-gonic/gin 与 spf13/viper，这些都能直接写进详情页。"
+            "README 中可见 go run ./cmd/server，说明项目提供了明确运行方式。",
+            "go.mod 已确认 module taskapi、go 1.21，并依赖 gin-gonic/gin 与 spf13/viper。"
           ]
         },
         {
-          title: "接口层为什么值得单独讲",
+          title: "接口层证据",
           paragraphs: [
-            "健康检查 /ping、任务接口前缀 /api/v1/tasks、调试入口 /debug/pprof 都已经在 README 明示。",
-            "这意味着你后面只需要再加几段典型请求示例，就能把它从“项目说明”升级成“接口作品展示”。"
+            "README 已明示 /ping、/api/v1/tasks 与 /debug/pprof。",
+            "这类项目信息足以支撑一条后端工程型详情页，而不只是简单目录介绍。"
           ]
         },
         {
-          title: "它和首页内容怎么配合",
+          title: "展示策略",
           paragraphs: [
-            "首页仍然只负责告诉访客：你做过一个 Go + Gin 的任务管理 API。",
-            "真正体现含金量的运行说明、接口习惯和工程信号，就应该沉到这一层详情页里。"
+            "首页只讲清它是什么，详情页再承接运行方式、接口习惯与工程信号。",
+            "如果后续补到更多接口示例，可以继续增强这条案例。"
           ]
         }
       ],
-      callout: "能把怎么跑、怎么测、接口在哪说清楚的后端项目，已经比大多数空话站点强一截。",
+      callout: "能把怎么跑、接口在哪、调试入口怎么进说清楚的后端项目，已经比空泛描述强很多。",
       keypoints: [
         "go run ./cmd/server",
-        "/api/v1/tasks + /debug/pprof",
-        "Go 1.21 + Gin + Viper"
+        "/api/v1/tasks",
+        "/debug/pprof"
       ],
       relatedSlugs: [
-        "taskapi-go-rest",
         "walkbyfaith-feature-breakdown",
-        "d-drive-project-deck-refresh"
+        "java-and-framework-labs"
       ]
     },
     {
       slug: "cocos-plane-and-android-labs",
-      badge: "Game + Android",
-      status: "Build",
+      badge: "Experiments",
+      status: "Verified",
       category: "Experiments",
-      title: "cocos_plane 和 Android 支付实验，适合放进“工程实验”层",
-      excerpt: "Cocos 飞机大战复刻和 Android 多模块支付实验，至少比空泛的“技术热爱”强太多。",
+      title: "cocos_plane 与 Android 工程实验整理",
+      excerpt: "Cocos 飞机大战复刻与 Android 多模块实验都已确认存在，适合归到工程实验层，而不是硬包装成成品。",
       meta: "2026.04 / 4 min read",
       date: "2026-04-18",
       readTime: "4 min read",
       orbit: "Orbit X2",
       linkLabel: "Read Detail",
-      summary: "除了站点、小程序和 Go API，这次还确认了 /mnt/d/Project Cocos/Plane/cocos_plane、/mnt/d/Project Android/TestAlipay 与 /mnt/d/Project Android/InterestingChange 这类实验项目。它们未必需要放首页第一屏，但非常适合进入归档页，形成更完整的项目层次。",
+      summary: "当前已确认 /mnt/d/Project Cocos/Plane/cocos_plane、/mnt/d/Project Android/TestAlipay 与 /mnt/d/Project Android/InterestingChange。它们更适合在站内归类为实验项目，用来展示技术广度与工程尝试。",
       cover: "/static/images/projects/cocos-plane-cover.png",
       coverAlt: "cocos_plane 项目的真实游戏实验画面",
       gallery: [
         {
           src: "/static/images/projects/cocos-plane-detail-gameover.png",
           alt: "cocos_plane 项目的真实游戏结束界面",
-          caption: "真实素材：来自 cocos_plane 项目的游戏画面。"
+          caption: "真实素材：来自 cocos_plane 项目。"
         },
         {
           src: "/static/images/projects/testalipay-cover.png",
           alt: "TestAlipay 项目的真实应用图标素材",
-          caption: "真实素材：TestAlipay 目前能确认到的主要视觉证据是应用图标，不冒充成完整截图。"
+          caption: "真实素材：TestAlipay 当前能确认到的主要视觉证据。"
         }
       ],
       deck: [
-        "实验项目不用硬吹成正式产品。",
-        "但只要是真做过的，就比模板句子值钱。",
-        "放对位置，整站内容层次会更稳。"
+        "实验项目不硬吹成商业产品。",
+        "Cocos 与 Android 方向都已确认。",
+        "适合作为第二梯队项目展示。"
       ],
       sections: [
         {
-          title: "cocos_plane 有什么可说的",
+          title: "Cocos 部分",
           paragraphs: [
-            "README 已明确写着“cocos 复刻小程序飞机大战”，定位清晰，适合归为游戏/交互实验。",
-            "这类项目对外展示时不需要装成熟商业案例，老老实实说是复刻与实验，反而更可信。"
+            "README 已明确写出 cocos_plane 是飞机大战复刻，项目定位清楚。",
+            "这类项目更适合被诚实归类为游戏/交互实验。"
           ]
         },
         {
-          title: "Android 目录为什么也该进站",
+          title: "Android 部分",
           paragraphs: [
-            "TestAlipay 目录里可见 app、kmqy、test 多模块和 gradle 配置，至少说明你做过 Android 集成和工程实验。",
-            "InterestingChange 当前可确认有 demo 模块和 Gradle 构建配置，适合先标成 Android 练习/实验项目，别硬吹成完整产品。"
+            "TestAlipay 目录中可见 app、kmqy、test 多模块与 Gradle 配置。",
+            "InterestingChange 当前可确认有 demo 模块与构建配置，适合暂时归为工程实验。"
           ]
         },
         {
-          title: "展示时怎么分层",
+          title: "展示策略",
           paragraphs: [
-            "首页前排放更容易理解的项目，比如小程序、站点和 API。",
-            "Cocos 和 Android 实验更适合进归档层，作为“我还做过这些”的第二梯队。"
+            "首页前排优先放更容易理解的小程序与 API。",
+            "这类实验项目则进入归档层，补足整站项目谱系。"
           ]
         }
       ],
-      callout: "实验项目不是边角料，放对地方就是你技术广度的证据。",
+      callout: "实验项目放对位置，就是技术广度的证据。",
       keypoints: [
         "Cocos 飞机大战复刻",
         "Android 多模块实验",
-        "放入工程实验层"
+        "工程实验层"
       ],
       relatedSlugs: [
-        "java-and-framework-labs",
-        "taskapi-go-rest"
+        "walkbyfaith-feature-breakdown",
+        "java-and-framework-labs"
       ]
     },
     {
       slug: "java-and-framework-labs",
-      badge: "Java + Framework",
-      status: "Queued",
+      badge: "Learning Labs",
+      status: "Verified",
       category: "Learning Labs",
-      title: "langchai4j、nest、OpenTGX：这些先老实归到学习样例和框架实验",
-      excerpt: "Spring Boot、MongoDB、JWT、langchain4j 和 Cocos TypeScript 方案都能确认存在，但目前更适合诚实地标成练习/框架实验。",
+      title: "langchai4j、nest、OpenTGX 学习样例与框架实验整理",
+      excerpt: "Java Spring Boot、MongoDB、JWT、langchain4j 与 Cocos TypeScript 方案都已确认存在，但目前更适合诚实归为学习样例与框架实验。",
       meta: "2026.04 / 5 min read",
       date: "2026-04-18",
       readTime: "5 min read",
       orbit: "Orbit J3",
       linkLabel: "Read Detail",
-      summary: "这轮又补查了 /mnt/d/Project Java/langchai4j/demo1、/mnt/d/Project Java/nest 和 /mnt/d/Project Cocos/OpenTGX/OpenTGX。能确认它们确实有 Maven / Spring Boot / TypeScript Cocos 工程结构，但就现有证据来看，更适合被当作学习样例或框架实验，而不是直接包装成上线产品。",
+      summary: "这轮已补查 /mnt/d/Project Java/langchai4j/demo1、/mnt/d/Project Java/nest 与 /mnt/d/Project Cocos/OpenTGX/OpenTGX。能确认它们有 Maven / Spring Boot / TypeScript Cocos 工程结构，但当前更适合老实归为学习样例和框架实验。",
       cover: "/static/images/projects/opentgx-cover.png",
       coverAlt: "OpenTGX 项目中的真实 logo 素材",
       gallery: [
         {
           src: "/static/images/projects/opentgx-detail-logo.png",
           alt: "OpenTGX 项目的真实文字 logo 素材",
-          caption: "真实素材：当前能确认的视觉主要来自 OpenTGX；langchai4j 与 nest 暂无截图，所以这里只老实展示已掌握的那部分。"
+          caption: "真实素材：当前能确认的视觉主要来自 OpenTGX。"
         }
       ],
       deck: [
-        "能确认存在工程结构，但别乱拔高。",
-        "Spring Boot + MongoDB + JWT 已经说明技术探索方向。",
-        "OpenTGX 明确是 fullstack game development solution，更像框架实验。"
+        "工程结构已确认，但不乱拔高。",
+        "Spring Boot / MongoDB / JWT / langchain4j 方向明确。",
+        "OpenTGX 更适合归类为框架实验。"
       ],
       sections: [
         {
-          title: "langchai4j/demo1 目前能确认什么",
+          title: "langchai4j/demo1",
           paragraphs: [
-            "pom.xml 显示它是 Spring Boot 4.0.3 + Java 21 项目，并引入了 langchain4j、MySQL、Redis、JPA、MongoDB 等依赖。",
-            "这说明它至少是一个朝 AI / 数据 / 后端整合方向尝试的 Java 工程，不该继续在站里隐身。"
+            "pom.xml 显示它是 Spring Boot + Java 21 工程，并引入了 langchain4j、MySQL、Redis、JPA、MongoDB 等依赖。",
+            "这说明它至少是一个朝 AI / 数据 / 后端整合方向尝试的 Java 项目。"
           ]
         },
         {
-          title: "nest 为什么先归为学习样例",
+          title: "nest",
           paragraphs: [
-            "nest 的 pom.xml 能确认 Spring Boot Web、MongoDB 和 JWT 依赖，target 目录里也已经有打包产物。",
-            "但 README 目前只写了一个标题，缺少足够的项目说明，所以展示时更适合先老实说成练习样例。"
+            "pom.xml 可确认 Spring Boot Web、MongoDB 与 JWT 依赖，target 中也已出现打包产物。",
+            "但 README 说明不足，因此更适合先归类为学习样例。"
           ]
         },
         {
-          title: "OpenTGX 为什么不该直接算成你的成品",
+          title: "OpenTGX",
           paragraphs: [
-            "OpenTGX 的 package.json 自己就写着“A fullstack game development solution using typescript”。这更像框架/方案实验。",
-            "所以我把它放到学习样例与框架实验层，既把 D 盘内容补进来了，也避免把可能带有第三方来源的东西硬说成个人成品。"
+            "package.json 明确写着 TypeScript 全栈游戏开发方案，更像框架/方案实验。",
+            "因此站内展示时会避免把它直接包装成个人上线成品。"
           ]
         }
       ],
-      callout: "有些东西值得展示，但不值得吹过头。诚实分类，比乱包装强。",
+      callout: "值得展示的内容，也要按证据强弱诚实分类。",
       keypoints: [
         "langchain4j + Java 21",
         "Spring Boot + MongoDB + JWT",
-        "Cocos TypeScript 框架实验"
+        "TypeScript Cocos 框架实验"
       ],
       relatedSlugs: [
         "taskapi-runtime-breakdown",
@@ -445,84 +252,85 @@ window.siteData = {
   ],
   projects: [
     {
-      badge: "Personal Site",
-      status: "Live",
-      title: "www.shizhou.top 首页 H5 改版",
-      excerpt: "把桌面味太重的首页改成移动端优先结构，同时重新接入 D 盘真实项目，不再空转。",
-      meta: "Static Site / H5 / Ongoing",
-      linkLabel: "查看归档",
-      href: "archive.html"
-    },
-    {
       badge: "WeChat Mini Program",
-      status: "Deep Dive",
-      title: "WalkByFaith 页面结构拆解",
-      excerpt: "主页、我的页、自定义 tabBar、weui 组件依赖都已确认，已经够写成完整移动端案例。",
-      meta: "WeChat / Mini Program / Detail",
+      status: "Verified",
+      title: "WalkByFaith 微信小程序",
+      excerpt: "主页、我的页、自定义 tabBar 与 weui 组件接入都已确认，是证据最完整的移动端项目。",
+      meta: "WeChat / Mini Program",
       linkLabel: "查看详情",
-      href: "article.html?slug=walkbyfaith-feature-breakdown"
+      href: "article.html?slug=walkbyfaith-feature-breakdown",
+      cover: "/static/images/projects/walkbyfaith-cover.png",
+      coverAlt: "WalkByFaith 项目目录中的真实图标素材"
     },
     {
       badge: "Backend API",
-      status: "Deep Dive",
-      title: "TaskAPI 运行与接口拆解",
-      excerpt: "Go 1.21、Gin、Viper、/api/v1/tasks、/debug/pprof 都已确认，适合当作后端工程案例。",
-      meta: "Go / Gin / API / Detail",
+      status: "Verified",
+      title: "TaskAPI Go 接口项目",
+      excerpt: "Go 1.21、Gin、Viper、/api/v1/tasks 与 /debug/pprof 都已确认，适合当作后端工程案例。",
+      meta: "Go / Gin / API",
       linkLabel: "查看详情",
-      href: "article.html?slug=taskapi-runtime-breakdown"
+      href: "article.html?slug=taskapi-runtime-breakdown",
+      cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'><rect width='1600' height='1000' fill='%230b0f18'/><rect x='42' y='42' width='1516' height='916' rx='40' fill='%230d1320' stroke='%23273958'/><rect x='110' y='110' width='1380' height='110' rx='28' fill='%23111b2d'/><text x='150' y='180' fill='%236f7cff' font-size='42' font-family='Arial, sans-serif'>taskapi / gin / viper / pprof</text><rect x='110' y='270' width='640' height='560' rx='34' fill='%23091319' stroke='%231c5b63'/><text x='154' y='348' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /ping</text><text x='154' y='412' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>{ status: &quot;ok&quot; }</text><text x='154' y='520' fill='%234cd6b8' font-size='34' font-family='Courier New, monospace'>GET /api/v1/tasks</text><text x='154' y='584' fill='%23ecf1ff' font-size='28' font-family='Courier New, monospace'>[]</text><text x='154' y='692' fill='%23ffb86c' font-size='34' font-family='Courier New, monospace'>/debug/pprof</text><rect x='820' y='270' width='670' height='560' rx='34' fill='%23101727' stroke='%23283857'/><rect x='888' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='932' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Router</text><rect x='1140' y='340' width='220' height='92' rx='24' fill='%23172034'/><text x='1186' y='396' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Store</text><rect x='1014' y='500' width='220' height='92' rx='24' fill='%23172034'/><text x='1062' y='556' fill='%23f5f7fb' font-size='32' font-family='Arial, sans-serif'>Service</text><path d='M1108 432 L1108 500' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><path d='M1140 546 L1234 546' stroke='%236f7cff' stroke-width='8' stroke-linecap='round'/><text x='110' y='900' fill='%239da3b0' font-size='30' font-family='Arial, sans-serif'>生成视觉：项目本体无截图，明确用 API 控制台示意图承接后端项目卡</text></svg>",
+      coverAlt: "TaskAPI 的生成视觉：Go + Gin 后端接口控制台示意图"
     },
     {
       badge: "Game Experiment",
-      status: "Build",
-      title: "cocos_plane 飞机大战复刻",
-      excerpt: "Cocos 项目，README 直接说明是飞机大战复刻，适合归到工程实验层。",
+      status: "Verified",
+      title: "cocos_plane 游戏实验",
+      excerpt: "Cocos 飞机大战复刻项目已确认，适合归到工程实验层。",
       meta: "Cocos / Mini Game / Experiment",
       linkLabel: "查看详情",
-      href: "article.html?slug=cocos-plane-and-android-labs"
+      href: "article.html?slug=cocos-plane-and-android-labs",
+      cover: "/static/images/projects/cocos-plane-cover.png",
+      coverAlt: "cocos_plane 项目的真实游戏实验画面"
     },
     {
       badge: "Android Lab",
-      status: "Scan",
-      title: "TestAlipay + InterestingChange",
-      excerpt: "TestAlipay 已确认 app、test、kmqy 多模块与支付宝/微信 SDK 依赖；InterestingChange 先保持实验分类。",
+      status: "Verified",
+      title: "TestAlipay / InterestingChange",
+      excerpt: "已确认多模块 Gradle 工程与 demo 结构，先归入 Android 工程实验。",
       meta: "Android / Gradle / Lab",
       linkLabel: "查看详情",
-      href: "article.html?slug=cocos-plane-and-android-labs"
+      href: "article.html?slug=cocos-plane-and-android-labs",
+      cover: "/static/images/projects/testalipay-cover.png",
+      coverAlt: "TestAlipay 项目的真实应用图标素材"
     },
     {
       badge: "Java / Framework Labs",
-      status: "Queued",
+      status: "Verified",
       title: "langchai4j / nest / OpenTGX",
-      excerpt: "Spring Boot、MongoDB、JWT、langchain4j 和 Cocos TypeScript 方案都已确认存在，先作为学习样例和框架实验归档。",
+      excerpt: "Java 后端、AI 依赖与 TypeScript Cocos 框架方案都已确认存在，先诚实归类为学习样例与框架实验。",
       meta: "Java / Spring Boot / TS / Cocos",
       linkLabel: "查看详情",
-      href: "article.html?slug=java-and-framework-labs"
+      href: "article.html?slug=java-and-framework-labs",
+      cover: "/static/images/projects/opentgx-cover.png",
+      coverAlt: "OpenTGX 项目中的真实 logo 素材"
     }
   ],
   notes: [
     {
-      badge: "Fix Note",
-      status: "Done",
-      title: "旧首页的问题不是不够酷，而是手机上难读，项目也没进来。",
-      excerpt: "这次直接把结构改成 H5 优先，再把真实项目替换掉空泛叙事，终于像个人站了。",
+      badge: "Project Note",
+      status: "Verified",
+      title: "首页内容已改成项目优先",
+      excerpt: "现在首页优先展示真实项目卡片，不再混入站点改版过程叙述。",
       meta: "Note 01",
-      linkLabel: "看详情",
-      href: "article.html?slug=d-drive-project-deck-refresh"
-    },
-    {
-      badge: "Deep Dive",
-      status: "Added",
-      title: "WalkByFaith 和 TaskAPI 现在不只“存在”，已经补成两条更像案例的详情入口。",
-      excerpt: "一个往移动端页面结构走，一个往后端工程细节走，首页的项目卡也顺手更像作品集。",
-      meta: "Note 02",
-      linkLabel: "打开项目",
+      linkLabel: "打开归档",
       href: "archive.html"
     },
     {
-      badge: "Next",
-      status: "Queue",
-      title: "后面继续补 Android / Java / Cocos 细节页，但继续维持诚实分层。",
-      excerpt: "先把证据最足的项目做深，再回头补实验和学习样例，不然全站容易重新变回泛泛而谈。",
+      badge: "Project Note",
+      status: "Verified",
+      title: "所有详情页都改为项目整理方向",
+      excerpt: "保留小程序、后端、实验与学习样例四个方向，不再写聊天口吻内容。",
+      meta: "Note 02",
+      linkLabel: "查看项目",
+      href: "archive.html"
+    },
+    {
+      badge: "Project Note",
+      status: "Verified",
+      title: "学习样例与框架实验已单独标注",
+      excerpt: "归属不确定或证据较弱的内容，统一按学习样例/框架实验展示，避免误导。",
       meta: "Note 03",
       linkLabel: "打开归档",
       href: "archive.html"
@@ -530,41 +338,41 @@ window.siteData = {
   ],
   timelineItems: [
     {
-      date: "PHASE 01",
-      title: "承认旧首页不适合 H5",
-      description: "先把桌面导向的排版思路停掉，改成移动端优先的信息节奏。"
+      date: "STEP 01",
+      title: "筛出证据最强的项目",
+      description: "优先展示 WalkByFaith、TaskAPI、cocos_plane、TestAlipay 这批已经读过关键文件的目录。"
     },
     {
-      date: "PHASE 02",
-      title: "把 D 盘真实项目抽出来",
-      description: "确认 WalkByFaith、TaskAPI、cocos_plane、TestAlipay、InterestingChange、langchai4j、nest 与 OpenTGX 等目录后，再写站点内容，避免继续空转。"
+      date: "STEP 02",
+      title: "按真实项目 / 工程实验 / 学习样例分层",
+      description: "避免把框架实验或说明不足的目录硬包装成上线产品。"
     },
     {
-      date: "PHASE 03",
-      title: "开始把证据最足的项目深化成案例",
-      description: "先把 WalkByFaith 和 TaskAPI 深化，继续把目录证明升级成真正能点开的项目内容。"
+      date: "STEP 03",
+      title: "把首页和归档统一成项目入口",
+      description: "首页负责项目卡片，归档负责完整整理，详情页负责展开证据。"
     }
   ],
   apiBlueprint: [
     {
-      method: "VIEW",
-      path: "/project-deck",
-      description: "首页先展示真实项目卡片，默认以项目流为主，而不是文章流。"
-    },
-    {
       method: "OPEN",
       path: "/archive",
-      description: "归档页继续承接长文说明和项目分层，负责把内容展开。"
+      description: "进入归档页，按分类查看已整理的真实项目。"
     },
     {
       method: "DETAIL",
       path: "/article?slug=walkbyfaith-feature-breakdown",
-      description: "补强后的移动端项目详情入口，专门承接 WalkByFaith 的页面结构与组件信息。"
+      description: "查看 WalkByFaith 小程序结构整理。"
     },
     {
       method: "DETAIL",
       path: "/article?slug=taskapi-runtime-breakdown",
-      description: "补强后的后端项目详情入口，专门承接 TaskAPI 的运行与接口说明。"
+      description: "查看 TaskAPI 后端工程整理。"
+    },
+    {
+      method: "DETAIL",
+      path: "/article?slug=cocos-plane-and-android-labs",
+      description: "查看 Cocos 与 Android 工程实验整理。"
     }
   ]
 };
