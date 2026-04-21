@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#07111f">
-  <meta name="description" content="Shizhou 的移动端优先个人站点首页，展示来自 D 盘真实项目的作品、实验与开发轨迹。">
-  <meta name="keywords" content="个人站点, H5, 移动端, 项目归档, 微信小程序, Go, Cocos, Android, Java">
-  <title>Shizhou // Mobile Project Deck</title>
+  <meta name="description" content="Shizhou 项目首页，面向手机浏览的简洁项目展示页。">
+  <meta name="keywords" content="个人站点, 项目展示, 微信小程序, 后端接口, Cocos, Android, Java">
+  <title>Shizhou // Projects</title>
   <link rel="stylesheet" href="static/css/scifi-blog.css">
   <script defer src="static/js/content-data.js"></script>
   <script defer src="static/js/scifi-blog.js"></script>
@@ -19,69 +19,39 @@
     <div class="ambient ambient-two"></div>
 
     <header class="topbar topbar-compact">
-      <a class="brand" href="#home" aria-label="Shizhou Project Deck">
+      <a class="brand" href="#home" aria-label="Shizhou Projects">
         <span class="brand-mark">SHIZHOU</span>
-        <span class="brand-sub">MOBILE PROJECT DECK</span>
+        <span class="brand-sub">PROJECTS</span>
       </a>
-      <a class="nav-cta" href="archive.html">看全部项目</a>
+      <a class="nav-cta" href="archive.html">全部项目</a>
     </header>
 
     <main class="mobile-main">
       <section class="hero hero-mobile panel reveal" id="home">
         <div class="hero-copy">
-          <p class="eyebrow">D: DRIVE / REAL PROJECTS / MOBILE FIRST</p>
-          <h1>这次不装样子，首页直接讲 D 盘里真有的项目。</h1>
+          <p class="eyebrow">PROJECTS / MOBILE / SIMPLE</p>
+          <h1>项目展示</h1>
           <p class="hero-text">
-            之前那版更像桌面海报，手机上信息太散，而且真正的 D 盘项目没进来。现在首页改成 H5 优先结构：先看我在做什么，再看项目卡片，最后进归档和详情。
+            首页只放最重要的项目入口，手机打开时能一眼看懂。
           </p>
 
           <div class="hero-actions hero-actions-stack">
-            <a class="button button-primary" href="#project-deck">先看项目</a>
-            <a class="button button-secondary" href="archive.html">打开归档</a>
+            <a class="button button-primary" href="#project-deck">看项目</a>
+            <a class="button button-secondary" href="archive.html">看全部</a>
           </div>
 
           <div class="hero-stats hero-stats-mobile">
             <article class="metric-card">
-              <span class="metric-label">ACTIVE SET</span>
-              <strong>9 个已核实方向</strong>
-              <p>站点、小程序、Go API、Cocos 游戏、Android 实验、Java Spring Boot、langchain4j、TypeScript Cocos 框架实验都已纳入。</p>
+              <span class="metric-label">PROJECTS</span>
+              <strong>4 个方向</strong>
+              <p>小程序、后端、工程实验、学习项目。</p>
             </article>
             <article class="metric-card">
-              <span class="metric-label">PAGE MODE</span>
-              <strong>H5 优先</strong>
-              <p>单列信息流、按钮更大、卡片更短，手机直接看，不再硬塞桌面舰桥布局。</p>
+              <span class="metric-label">VIEW</span>
+              <strong>手机优先</strong>
+              <p>内容更短，入口更直接。</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="section section-tight reveal" id="signal">
-        <div class="section-heading section-heading-mobile">
-          <div>
-            <p class="eyebrow">WHY THIS VERSION</p>
-            <h2>这版到底改了什么</h2>
-          </div>
-          <p class="section-copy">
-            很简单：把假的“气氛”往后放，把真的“项目内容”往前提。首页先能看懂，再谈风格。
-          </p>
-        </div>
-
-        <div class="signal-grid signal-grid-mobile">
-          <article class="info-card">
-            <span class="card-index">01</span>
-            <h3>移动端重排</h3>
-            <p>去掉桌面味太重的多栏信息堆叠，改成 H5 更顺手的单列卡片流。</p>
-          </article>
-          <article class="info-card">
-            <span class="card-index">02</span>
-            <h3>真实项目进站</h3>
-            <p>把 WalkByFaith、TaskAPI、cocos_plane、InterestingChange、langchai4j、OpenTGX 这些真实目录写进首页内容源。</p>
-          </article>
-          <article class="info-card">
-            <span class="card-index">03</span>
-            <h3>诚实分层</h3>
-            <p>能确认是项目就展示，像框架实验和学习样例就老实标清，不乱吹成上线产品。</p>
-          </article>
         </div>
       </section>
 
@@ -89,87 +59,40 @@
         <div class="section-heading section-heading-inline section-heading-mobile">
           <div>
             <p class="eyebrow">PROJECT DECK</p>
-            <h2>D 盘项目卡片</h2>
+            <h2>项目</h2>
           </div>
           <div class="feed-tabs" aria-label="内容类型">
-            <button class="feed-tab" type="button" data-feed="posts">日志</button>
+            <button class="feed-tab" type="button" data-feed="posts">详情</button>
             <button class="feed-tab is-active" type="button" data-feed="projects">项目</button>
-            <button class="feed-tab" type="button" data-feed="notes">短讯</button>
+            <button class="feed-tab" type="button" data-feed="notes">说明</button>
           </div>
         </div>
         <div class="feed-grid feed-grid-mobile" id="feed-grid"></div>
       </section>
 
-      <section class="section section-tight reveal" id="d-drive-map">
-        <div class="section-heading section-heading-mobile">
-          <div>
-            <p class="eyebrow">D: DRIVE MAP</p>
-            <h2>当前已纳入的目录来源</h2>
-          </div>
-          <p class="section-copy">
-            这些不是编的，是这次实际从 D 盘里翻出来并整理进站点的数据来源。没确认归属的第三方模板，我没乱算成你的成果。
-          </p>
-        </div>
-
-        <div class="stack-grid stack-grid-mobile">
-          <article class="stack-panel">
-            <span class="panel-tag">WECHAT</span>
-            <h3>/mnt/d/Project WeChat/WalkByFaith</h3>
-            <p>自定义 tabBar、主页/我的页、接入 weui-miniprogram，适合当作移动端作品展示。</p>
-          </article>
-          <article class="stack-panel">
-            <span class="panel-tag">GO</span>
-            <h3>/mnt/d/Project Go/taskapi</h3>
-            <p>Gin REST API，带 pprof、优雅关停和单元测试，这种就该拿出来撑工程感。</p>
-          </article>
-          <article class="stack-panel">
-            <span class="panel-tag">COCOS</span>
-            <h3>/mnt/d/Project Cocos/Plane/cocos_plane</h3>
-            <p>Cocos 飞机大战复刻项目，内容明确，不是空壳目录。</p>
-          </article>
-          <article class="stack-panel">
-            <span class="panel-tag">ANDROID</span>
-            <h3>/mnt/d/Project Android/TestAlipay + InterestingChange</h3>
-            <p>一个是多模块支付集成实验，一个是 demo Gradle 工程，都已纳入实验层。</p>
-          </article>
-          <article class="stack-panel">
-            <span class="panel-tag">JAVA</span>
-            <h3>/mnt/d/Project Java/langchai4j/demo1 + nest</h3>
-            <p>Spring Boot、MongoDB、JWT、langchain4j 等依赖都已确认，先按学习样例与后端实验展示。</p>
-          </article>
-          <article class="stack-panel">
-            <span class="panel-tag">FRAMEWORK</span>
-            <h3>/mnt/d/Project Cocos/OpenTGX/OpenTGX</h3>
-            <p>package.json 明确写着 TypeScript 全栈游戏开发方案，更适合老实归到框架实验层。</p>
-          </article>
-        </div>
-      </section>
-
       <section class="section split-section reveal" id="stack">
         <div class="section-heading section-heading-mobile">
           <div>
-            <p class="eyebrow">BUILD TRACK</p>
-            <h2>后面继续怎么补，不瞎吹</h2>
+            <p class="eyebrow">BROWSE</p>
+            <h2>继续看</h2>
           </div>
           <p class="section-copy">
-            站点接下来就按“真实作品 / 工程实验 / 学习样例”三层继续扩。先讲清楚东西，再谈包装，这才像人写的站，不像模板尸体复活。
+            首页先看重点，更多内容放到归档和详情页。
           </p>
         </div>
 
         <div class="stack-layout stack-layout-mobile">
           <article class="stack-panel stack-panel-large">
-            <span class="panel-tag">NEXT SYNC</span>
-            <h3>继续把 Java、Android、更多框架实验补成真正可点开的内容。</h3>
+            <span class="panel-tag">ARCHIVE</span>
+            <h3>想看更多项目，就进入归档页。</h3>
             <p>
-              已确认的 Java、Android 与框架实验目录会继续补充到归档详情，统一按真实项目、工程实验、学习样例三层展示。
+              归档页会把不同方向的项目放在一起，方便继续浏览。
             </p>
             <div class="stack-points">
               <span>WalkByFaith</span>
               <span>TaskAPI</span>
               <span>cocos_plane</span>
-              <span>InterestingChange</span>
-              <span>langchai4j</span>
-              <span>OpenTGX</span>
+              <span>Java</span>
             </div>
           </article>
 
@@ -180,35 +103,32 @@
       <section class="section api-section reveal" id="api-ready">
         <div class="section-heading section-heading-mobile">
           <div>
-            <p class="eyebrow">DETAIL ENTRY</p>
-            <h2>继续深入就从这里走</h2>
+            <p class="eyebrow">ENTRY</p>
+            <h2>快速入口</h2>
           </div>
           <p class="section-copy">
-            首页负责先把项目摆出来，想看更细的内容，就走归档和详情页，不在首页硬塞长段废话。
+            点项目看详情，点归档看全部。
           </p>
         </div>
 
         <div class="api-layout api-layout-mobile">
           <article class="api-blueprint">
             <div class="console-head">
-              <span>Archive Route</span>
+              <span>Project Links</span>
               <span class="console-status">READY</span>
             </div>
             <div class="api-list" id="api-list"></div>
           </article>
 
           <article class="api-notes">
-            <span class="panel-tag">H5 NOTE</span>
-            <h3>移动端首页的原则</h3>
+            <span class="panel-tag">MOBILE</span>
+            <h3>页面原则</h3>
             <ol>
-              <li>首屏先交代身份和内容来源。</li>
-              <li>项目卡片优先于抽象概念口号。</li>
-              <li>按钮和阅读路径直接、短、可点。</li>
-              <li>学习样例和框架实验要单独标，不冒充商业成品。</li>
+              <li>内容要短。</li>
+              <li>项目要直接出现。</li>
+              <li>入口要明显。</li>
+              <li>手机上要一眼看懂。</li>
             </ol>
-            <p class="api-footnote">
-              这才像 H5 首页。别再让手机用户先看一堆桌面装饰，再猜你到底做了什么。
-            </p>
           </article>
         </div>
       </section>
@@ -216,8 +136,8 @@
 
     <footer class="footer footer-mobile">
       <div>
-        <span class="footer-mark">SHIZHOU // REAL PROJECTS FROM D:</span>
-        <p>这版先把内容救回来，再继续把 Java / Android / Framework 归档补厚。</p>
+        <span class="footer-mark">SHIZHOU // PROJECTS</span>
+        <p>项目展示页</p>
       </div>
       <div class="footer-meta">
         <span id="sync-time">SYNCING...</span>
