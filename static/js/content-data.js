@@ -280,7 +280,7 @@ window.siteData = {
     },
     {
       badge: "项目",
-      status: "整理",
+      status: "归档",
       title: "归档负责补充更多内容",
       excerpt: "想看完整内容时，再进归档和详情页。",
       meta: "Note 02",

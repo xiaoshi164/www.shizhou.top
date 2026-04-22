@@ -19,7 +19,7 @@ function renderFooterMeta() {
 
   const now = new Date();
   const pad = (value) => String(value).padStart(2, "0");
-  syncTime.textContent = `LAST SYNC ${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  syncTime.textContent = `最后更新 ${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
   yearMark.textContent = String(now.getFullYear());
 }
 
@@ -95,9 +95,9 @@ function renderGallerySection(article) {
   return `
     <section class="article-gallery-section">
       <div class="article-gallery-head">
-        <span class="panel-tag">Gallery</span>
-        <h2>相关视觉资料</h2>
-        <p>能直接拿项目里的图就拿项目图；后端没截图的地方，也会明确标注成生成视觉，不装。</p>
+        <span class="panel-tag">图片</span>
+        <h2>项目图片</h2>
+        <p>这里展示和项目相关的图片资料。</p>
       </div>
       <div class="article-gallery">
         ${article.gallery.map((item) => `
@@ -133,19 +133,19 @@ function renderArchivePage() {
 
     statsRoot.innerHTML = `
       <article class="stat-card">
-        <span class="panel-tag">Log Count</span>
+        <span class="panel-tag">项目数量</span>
         <strong>${posts.length}</strong>
-        <p>当前已整理进归档的长文数量。</p>
+        <p>当前归档中的项目数量。</p>
       </article>
       <article class="stat-card">
-        <span class="panel-tag">Read Time</span>
-        <strong>${totalRead} min</strong>
-        <p>完成整轮阅读所需的大致时间。</p>
+        <span class="panel-tag">阅读时间</span>
+        <strong>${totalRead} 分钟</strong>
+        <p>看完全部项目的大致时间。</p>
       </article>
       <article class="stat-card">
-        <span class="panel-tag">Latest Dock</span>
-        <strong>${escapeHtml(latest ? latest.orbit : "N/A")}</strong>
-        <p>最新入轨的内容节点编号。</p>
+        <span class="panel-tag">最新项目</span>
+        <strong>${escapeHtml(latest ? latest.title : "暂无")}</strong>
+        <p>最新显示的项目。</p>
       </article>
     `;
   }
@@ -180,9 +180,9 @@ function renderArchivePage() {
     if (!filteredPosts.length) {
       gridRoot.innerHTML = `
         <article class="archive-card empty-state">
-          <span class="panel-tag">No Signal</span>
-          <h3>这个筛选项下还没有内容。</h3>
-          <p>切回其他分类，或者继续往前扩充你的内容轨道。</p>
+          <span class="panel-tag">暂无内容</span>
+          <h3>这个分类下还没有项目。</h3>
+          <p>可以切换其他分类看看。</p>
         </article>
       `;
       return;
@@ -206,7 +206,7 @@ function renderArchivePage() {
           <p class="archive-card-summary">${escapeHtml(post.summary)}</p>
           <div class="archive-card-footer">
             <span class="feed-meta">${escapeHtml(formatDisplayDate(post.date))} / ${escapeHtml(post.readTime)}</span>
-            <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">Open Detail</a>
+            <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">查看详情</a>
           </div>
         </div>
       </article>
@@ -235,9 +235,9 @@ function renderArticlePage() {
   if (!article) {
     articleRoot.innerHTML = `
       <article class="section article-panel empty-state">
-        <span class="panel-tag">No Signal</span>
-        <h2>没有找到对应文章。</h2>
-        <p>请返回归档页重新选择内容。</p>
+        <span class="panel-tag">未找到</span>
+        <h2>没有找到对应项目。</h2>
+        <p>请返回归档页重新选择。</p>
       </article>
     `;
     relatedRoot.innerHTML = "";
@@ -277,28 +277,28 @@ function renderArticlePage() {
       ${renderGallerySection(article)}
 
       <article class="article-callout reveal">
-        <span class="panel-tag">Core Signal</span>
+        <span class="panel-tag">项目说明</span>
         <p>${escapeHtml(article.callout)}</p>
       </article>
     </div>
 
     <aside class="article-aside reveal">
       <div class="aside-group">
-        <span class="panel-tag">Outline</span>
+        <span class="panel-tag">目录</span>
         <ol class="article-outline">
           ${article.sections.map((section) => `<li>${escapeHtml(section.title)}</li>`).join("")}
         </ol>
       </div>
       <div class="aside-group">
-        <span class="panel-tag">Keypoints</span>
+        <span class="panel-tag">要点</span>
         <div class="article-tags">
           ${article.keypoints.map((point) => `<span class="tag-chip">${escapeHtml(point)}</span>`).join("")}
         </div>
       </div>
       <div class="aside-group">
-        <span class="panel-tag">Jump</span>
+        <span class="panel-tag">跳转</span>
         <a class="mini-link" href="archive.html">返回归档</a>
-        <a class="mini-link" href="index.html#feed">回到首页日志</a>
+        <a class="mini-link" href="index.html#project-deck">回到首页</a>
       </div>
     </aside>
   `;
@@ -310,7 +310,7 @@ function renderArticlePage() {
       <span class="panel-tag">${escapeHtml(post.category)}</span>
       <h3>${escapeHtml(post.title)}</h3>
       <p>${escapeHtml(post.excerpt)}</p>
-      <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">Open Detail</a>
+      <a class="feed-link" href="article.html?slug=${encodeURIComponent(post.slug)}">查看详情</a>
     </article>
   `).join("");
 }

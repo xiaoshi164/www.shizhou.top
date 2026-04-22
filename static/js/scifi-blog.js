@@ -119,7 +119,7 @@ function bindReveal() {
 function renderFooterMeta() {
   const now = new Date();
   const pad = (value) => String(value).padStart(2, "0");
-  syncTime.textContent = `LAST SYNC ${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  syncTime.textContent = `最后更新 ${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
   yearMark.textContent = String(now.getFullYear());
 }
 
